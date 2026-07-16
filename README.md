@@ -1,6 +1,6 @@
 # Cavallino Index
 
-Hourly price tracker for Ferrari F430 and SF90 listings on AutoScout24.ch, published as a GitHub Pages dashboard.
+Hourly price tracker for Ferrari F430, SF90, 812, 488 and F360 listings on AutoScout24.ch, published as a GitHub Pages dashboard.
 
 No servers, no database, no accounts beyond GitHub. A scheduled Action crawls, commits the data as files, builds the site, and deploys it.
 
@@ -48,7 +48,7 @@ Two details that are load-bearing:
 - **The sort is required for correctness.** Without `sort: PRICE/ASC` the API returns an unstable order, and paginating gives you 54 unique cars out of 57 — some duplicated across pages, others never returned. Measured, repeatably. With the sort, sets come back complete.
 - **A gap must never read as "sold".** Delisting requires two consecutive misses *and* a crawl that returned exactly `totalElements` cars. A partial crawl records prices and skips delisting entirely.
 
-Requests are throttled 4s apart; their edge returns 403 on rapid-fire traffic. A full crawl is ~7 requests over ~30s.
+Requests are throttled 4s apart; their edge returns 403 on rapid-fire traffic. A full crawl of the five models is ~17 requests over ~70s.
 
 **Data** (`data/`, committed every run)
 
@@ -68,7 +68,9 @@ Fetches `data/dashboard.json`, which is copied next to the built site on deploy.
 
 **Frequency** — `.github/workflows/update.yml`, the `cron` line. Hourly is the ceiling worth running; asking prices move on a scale of weeks. Every 3h (`17 */3 * * *`) captures essentially the same signal at a quarter of the traffic. GitHub's scheduler is best-effort and skips or delays runs under load — fine here, irrelevant for prices, worth knowing.
 
-**More models** — `MODELS` in `crawl.py`. Model keys come from the API: `f430`, `sf90`, `296`, `812`, `roma`. Note `430` and `sf90-stradale` return zero — the keys aren't guessable, check against the API first.
+**More models** — `MODELS` in `crawl.py`. Model keys come from the API: `f430`, `sf90`, `812`, `488`, `f360`, `296`, `roma`. The keys aren't guessable — `430`, `360` and `sf90-stradale` all return zero, while `f430` and `f360` are right. Check a new key returns a non-zero `totalElements` before adding it.
+
+**Variants aren't queryable.** A Competizione, Pista or Challenge Stradale can only be asked for as its whole model (`812`, `488`, `f360`). Listings carry no version key — just `versionFullName`, free text the dealer types, which is why it contains both `Chalange` and a 145k `Challenge` that is a race car rather than a Challenge Stradale. Filter on that string only if you're willing to be wrong in both directions.
 
 **More makes** — `makeKey` is in `fetch_model`. `GET api.autoscout24.ch/v1/makes?vehicleCategory=car` lists all of them.
 

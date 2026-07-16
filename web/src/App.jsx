@@ -23,11 +23,26 @@ const T = {
   faint: "#5A6470",
   rosso: "#FF2B2B",
   giallo: "#FFC300",
+  blu: "#3B82F6",
+  rosa: "#E04A93",
+  acqua: "#1A9AA8",
   drop: "#38D073",
   mono: "'IBM Plex Mono', monospace",
   display: "'Michroma', sans-serif",
   body: "'Archivo', sans-serif",
 };
+
+// Fixed order — a series keeps its colour no matter which filter is on, and the
+// hues are checked for colourblind separation as a sequence, so don't reshuffle
+// them. Green is reserved for price drops and never used for a model.
+const MODELS = [
+  { key: "f430", label: "F430", color: T.giallo },
+  { key: "sf90", label: "SF90", color: T.rosso },
+  { key: "812", label: "812", color: T.blu },
+  { key: "488", label: "488", color: T.rosa },
+  { key: "f360", label: "F360", color: T.acqua },
+];
+const COLOR = Object.fromEntries(MODELS.map((m) => [m.key, m.color]));
 
 const chf = (n) => (n == null ? "—" : "CHF " + n.toLocaleString("de-CH"));
 const kchf = (n) => (n == null ? "—" : (n / 1000).toFixed(0) + "k");
@@ -65,7 +80,7 @@ function buildStats(listings) {
   if (days[days.length - 1] !== today) days.push(today);
 
   return days.map((d) => {
-    const acc = { f430: [], sf90: [] };
+    const acc = Object.fromEntries(MODELS.map((m) => [m.key, []]));
     for (const l of listings) {
       const start = day(l.first_seen);
       const end = l.delisted_at ? day(l.delisted_at) : today;
@@ -79,7 +94,7 @@ function buildStats(listings) {
     }
     const avg = (a) =>
       a.length >= 3 ? Math.round(a.reduce((x, y) => x + y, 0) / a.length / 1000) : undefined;
-    return { date: d, f430: avg(acc.f430), sf90: avg(acc.sf90) };
+    return { date: d, ...Object.fromEntries(MODELS.map((m) => [m.key, avg(acc[m.key])])) };
   });
 }
 
@@ -108,6 +123,17 @@ export default function App() {
     [listings, model, status]
   );
 
+  // Counts follow the status filter, so the tabs describe what clicking them shows.
+  const counts = useMemo(() => {
+    const inStatus = listings.filter((l) => l.status === status);
+    return {
+      all: inStatus.length,
+      ...Object.fromEntries(
+        MODELS.map((m) => [m.key, inStatus.filter((l) => l.model_key === m.key).length])
+      ),
+    };
+  }, [listings, status]);
+
   const kpis = useMemo(() => {
     const active = listings.filter((l) => l.status === "active");
     const cuts = active.filter((l) => l.current_price < l.first_price);
@@ -122,9 +148,8 @@ export default function App() {
       {
         label: "ON MARKET",
         value: active.length,
-        sub: `${active.filter((l) => l.model_key === "f430").length} F430 · ${
-          active.filter((l) => l.model_key === "sf90").length
-        } SF90`,
+        // Per-model counts live on the filter tabs — five of them don't fit here.
+        sub: `across ${MODELS.length} models`,
       },
       { label: "LISTED < 7D", value: fresh.length, sub: "new to the market", color: T.giallo },
       { label: "PRICE CUTS", value: cuts.length, sub: "since tracking began", color: T.drop },
@@ -190,7 +215,7 @@ export default function App() {
               letterSpacing: "0.1em",
             }}
           >
-            F430 · SF90 — AUTOSCOUT24.CH · SVIZZERA
+            {MODELS.map((m) => m.label).join(" · ")} — AUTOSCOUT24.CH · SVIZZERA
           </div>
         </div>
         <div style={{ fontFamily: T.mono, fontSize: 11, color: T.faint }}>
@@ -335,22 +360,17 @@ export default function App() {
                     labelStyle={{ color: T.dim }}
                     formatter={(v, n) => [v + "k", n.toUpperCase()]}
                   />
-                  <Line
-                    type="stepAfter"
-                    dataKey="sf90"
-                    stroke={T.rosso}
-                    dot={false}
-                    strokeWidth={1.5}
-                    connectNulls
-                  />
-                  <Line
-                    type="stepAfter"
-                    dataKey="f430"
-                    stroke={T.giallo}
-                    dot={false}
-                    strokeWidth={1.5}
-                    connectNulls
-                  />
+                  {MODELS.map((m) => (
+                    <Line
+                      key={m.key}
+                      type="stepAfter"
+                      dataKey={m.key}
+                      stroke={m.color}
+                      dot={false}
+                      strokeWidth={1.5}
+                      connectNulls
+                    />
+                  ))}
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -364,12 +384,11 @@ export default function App() {
                 marginTop: 4,
               }}
             >
-              <span>
-                <span style={{ color: T.giallo }}>■</span> F430
-              </span>
-              <span>
-                <span style={{ color: T.rosso }}>■</span> SF90
-              </span>
+              {MODELS.map((m) => (
+                <span key={m.key}>
+                  <span style={{ color: m.color }}>■</span> {m.label}
+                </span>
+              ))}
             </div>
           </>
         )}
@@ -378,14 +397,14 @@ export default function App() {
       {/* Filters */}
       <div style={{ display: "flex", gap: 8, padding: "20px 24px 12px", flexWrap: "wrap" }}>
         <Tab val="all" cur={model} set={setModel}>
-          ALL
+          ALL <span style={{ color: T.faint }}>{counts.all}</span>
         </Tab>
-        <Tab val="f430" cur={model} set={setModel}>
-          F430
-        </Tab>
-        <Tab val="sf90" cur={model} set={setModel}>
-          SF90
-        </Tab>
+        {MODELS.map((m) => (
+          <Tab key={m.key} val={m.key} cur={model} set={setModel}>
+            <span style={{ color: m.color }}>■</span> {m.label}{" "}
+            <span style={{ color: T.faint }}>{counts[m.key]}</span>
+          </Tab>
+        ))}
         <div style={{ width: 1, background: T.line, margin: "4px 8px" }} />
         <Tab val="active" cur={status} set={setStatus}>
           ON MARKET
@@ -429,7 +448,7 @@ export default function App() {
                 padding: "10px 12px",
                 cursor: "pointer",
                 background: open === l.id ? T.panelUp : T.panel,
-                borderLeft: `3px solid ${l.model_key === "sf90" ? T.rosso : T.giallo}`,
+                borderLeft: `3px solid ${COLOR[l.model_key] ?? T.faint}`,
                 borderBottom: `1px solid ${T.bg}`,
               }}
             >

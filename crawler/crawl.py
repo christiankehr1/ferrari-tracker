@@ -23,7 +23,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 API = "https://api.autoscout24.ch/v1/listings/search"
-MODELS = ["f430", "sf90"]
+# Model keys are the API's, not guessable — verify a new one returns a non-zero
+# totalElements before adding it. "360" and "488-pista" both return nothing;
+# "f360" and "488" are the real keys. Variants (Competizione, Pista, Challenge
+# Stradale) aren't queryable — they're only a free-text versionFullName on the
+# listing, so a model is the finest thing we can ask for.
+MODELS = ["f430", "sf90", "812", "488", "f360"]
 PAGE_SIZE = 20
 DELAY = 4.0          # their edge 403s rapid-fire requests
 MISSES_TO_DELIST = 2
