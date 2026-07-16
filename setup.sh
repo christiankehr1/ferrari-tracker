@@ -72,11 +72,20 @@ fi
 
 # --- 4. First run -------------------------------------------------------
 say "Starting the first crawl"
-# The push may have already kicked one off; a second is harmless (crawls dedupe).
-gh workflow run update.yml >/dev/null 2>&1 || true
+# The push above already starts a run. Dispatching a second one races it: both
+# crawl, both commit, and the slower push is rejected. Only dispatch if nothing
+# is already running — e.g. a re-run with nothing new to push.
 sleep 6
-
-RUN_ID=$(gh run list --workflow=update.yml --limit 1 --json databaseId -q '.[0].databaseId' 2>/dev/null || echo "")
+live() {
+  gh run list --workflow=update.yml --limit 5 --json databaseId,status \
+    -q '[.[] | select(.status != "completed")][0].databaseId' 2>/dev/null || echo ""
+}
+RUN_ID=$(live)
+if [ -z "$RUN_ID" ]; then
+  gh workflow run update.yml >/dev/null 2>&1 || true
+  sleep 6
+  RUN_ID=$(live)
+fi
 if [ -n "$RUN_ID" ]; then
   echo "  Watching run $RUN_ID (~2 min). Ctrl-C is safe — it keeps running."
   gh run watch "$RUN_ID" --exit-status || die "The run failed. Open it: gh run view $RUN_ID --log-failed"

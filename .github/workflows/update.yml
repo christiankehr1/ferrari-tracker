@@ -42,8 +42,25 @@ jobs:
           git config user.email "actions@github.com"
           git add data/
           # No changes is the normal case — prices rarely move. Don't fail.
-          git diff --staged --quiet || git commit -m "data: crawl $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push
+          if git diff --staged --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git commit -m "data: crawl $(date -u +'%Y-%m-%d %H:%M UTC')"
+          # Another run can land data between our checkout and our push, which
+          # rejects ours as non-fast-forward. Both crawls read the same market and
+          # ours is the later one, so replay it on top and let it win rather than
+          # failing a publish over it.
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt) — rebasing onto origin/main."
+            git fetch origin main
+            git rebase -X theirs origin/main || git rebase --abort || true
+          done
+          echo "Still couldn't push after 3 attempts."
+          exit 1
 
       - uses: actions/setup-node@v4
         with:
