@@ -8,19 +8,30 @@
       name="description"
       content="Hourly asking-price tracker for Ferrari F430, SF90, 812, 488 and F360 listings in Switzerland."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&family=Michroma&display=swap"
-      rel="stylesheet"
-    />
     <style>
+      /* Styrene A is the B.I. Collection brand face, self-hosted under a web
+         licence. Only the Regular weight is available, so synthesis is off
+         below — a faux-bold Styrene smears the outlines. */
+      @font-face {
+        font-family: "Styrene A";
+        src: url("./fonts/StyreneA-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
       html,
       body,
       #root {
         margin: 0;
         padding: 0;
         background: #0b0d10;
+        /* The table is a timing tower. Styrene's digits are proportional — its
+           "1" is 445 units against 692 for "0" — so the ASK/KM/DAYS columns
+           only line up with tabular figures forced on. */
+        font-variant-numeric: tabular-nums;
+        /* Weights 500/600 in the app render as Regular rather than smeared.
+           Add real Medium/Bold faces here to bring them back. */
+        font-synthesis: none;
       }
     </style>
   </head>

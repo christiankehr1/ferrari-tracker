@@ -10,6 +10,7 @@ import {
 } from "recharts";
 import { T } from "./theme.js";
 import ModelsPage from "./ModelsPage.jsx";
+import BiWordmark from "./BiWordmark.jsx";
 
 // Data is published next to the site by the GitHub Action.
 // Cache-bust so a fresh crawl shows up without a hard refresh.
@@ -138,8 +139,9 @@ function Shell({ data, view, children }) {
         }}
       >
         <div>
-          <div style={{ fontFamily: T.display, fontSize: 15, letterSpacing: "0.18em" }}>
-            <span style={{ color: T.rosso }}>■</span> CAVALLINO INDEX
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <span style={{ color: T.rosso, fontFamily: T.display, fontSize: 15 }}>■</span>
+            <BiWordmark height={17} color={T.text} />
           </div>
           <div
             style={{

@@ -2,3 +2,11 @@ node_modules/
 dist/
 .DS_Store
 __pycache__/
+
+# Local dev only: web/public/data is a junction to the repo's data/ so the Vite
+# dev server can serve dashboard.json, which CI otherwise copies into dist/ at
+# build time. Git follows junctions like ordinary directories, so without this
+# a `git add -A` would commit a duplicate, instantly-stale copy of the crawl.
+# Note this ignores the data/ subdirectory only — web/public/fonts/ is real,
+# and must stay tracked or the deployed site loses Styrene.
+web/public/data/
