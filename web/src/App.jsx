@@ -8,29 +8,12 @@ import {
   ResponsiveContainer,
   CartesianGrid,
 } from "recharts";
+import { T } from "./theme.js";
+import ModelsPage from "./ModelsPage.jsx";
 
 // Data is published next to the site by the GitHub Action.
 // Cache-bust so a fresh crawl shows up without a hard refresh.
 const DATA_URL = "./data/dashboard.json";
-
-const T = {
-  bg: "#0B0D10",
-  panel: "#14181D",
-  panelUp: "#1B2129",
-  line: "#242B34",
-  text: "#E8E4DA",
-  dim: "#8A93A0",
-  faint: "#5A6470",
-  rosso: "#FF2B2B",
-  giallo: "#FFC300",
-  blu: "#3B82F6",
-  rosa: "#E04A93",
-  acqua: "#1A9AA8",
-  drop: "#38D073",
-  mono: "'IBM Plex Mono', monospace",
-  display: "'Michroma', sans-serif",
-  body: "'Archivo', sans-serif",
-};
 
 // Fixed order — a series keeps its colour no matter which filter is on, and the
 // hues are checked for colourblind separation as a sequence, so don't reshuffle
@@ -98,12 +81,112 @@ function buildStats(listings) {
   });
 }
 
+const NAV = [
+  { id: "dashboard", href: "#/", label: "DASHBOARD" },
+  { id: "models", href: "#/models", label: "MODEL DIRECTORY" },
+];
+
+// Hash routing, not a router: GitHub Pages serves one static index.html, so a
+// real path would 404 on refresh. The hash keeps both pages linkable.
+const viewFromHash = () => (window.location.hash.replace(/^#\/?/, "") === "models" ? "models" : "dashboard");
+
+function Shell({ data, view, children }) {
+  return (
+    <div
+      style={{
+        minHeight: "100vh",
+        background: T.bg,
+        color: T.text,
+        fontFamily: T.body,
+        padding: "0 0 64px",
+      }}
+    >
+      <header
+        style={{
+          padding: "20px 24px 0",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "baseline",
+          flexWrap: "wrap",
+          gap: 8,
+        }}
+      >
+        <div>
+          <div style={{ fontFamily: T.display, fontSize: 15, letterSpacing: "0.18em" }}>
+            <span style={{ color: T.rosso }}>■</span> CAVALLINO INDEX
+          </div>
+          <div
+            style={{
+              fontFamily: T.mono,
+              fontSize: 11,
+              color: T.dim,
+              marginTop: 6,
+              letterSpacing: "0.1em",
+            }}
+          >
+            {MODELS.map((m) => m.label).join(" · ")} — AUTOSCOUT24.CH · SVIZZERA
+          </div>
+        </div>
+        <div style={{ fontFamily: T.mono, fontSize: 11, color: T.faint }}>
+          {data ? (
+            <>
+              LAST CRAWL {data.crawled_at.slice(0, 16).replace("T", " ")} UTC ·{" "}
+              <span style={{ color: T.drop }}>●</span> LIVE
+            </>
+          ) : (
+            "CONNECTING…"
+          )}
+        </div>
+      </header>
+      <nav
+        style={{
+          display: "flex",
+          gap: 4,
+          padding: "14px 24px 0",
+          borderBottom: `1px solid ${T.line}`,
+        }}
+      >
+        {NAV.map((n) => {
+          const on = view === n.id;
+          return (
+            <a
+              key={n.id}
+              href={n.href}
+              aria-current={on ? "page" : undefined}
+              style={{
+                padding: "8px 12px",
+                fontFamily: T.mono,
+                fontSize: 11,
+                letterSpacing: "0.12em",
+                color: on ? T.text : T.dim,
+                textDecoration: "none",
+                borderBottom: `2px solid ${on ? T.rosso : "transparent"}`,
+                marginBottom: -1,
+              }}
+            >
+              {n.label}
+            </a>
+          );
+        })}
+      </nav>
+      {children}
+    </div>
+  );
+}
+
 export default function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [model, setModel] = useState("all");
   const [status, setStatus] = useState("active");
   const [open, setOpen] = useState(null);
+  const [view, setView] = useState(viewFromHash);
+
+  useEffect(() => {
+    const sync = () => setView(viewFromHash());
+    window.addEventListener("hashchange", sync);
+    return () => window.removeEventListener("hashchange", sync);
+  }, []);
 
   useEffect(() => {
     fetch(`${DATA_URL}?t=${Date.now()}`)
@@ -181,61 +264,16 @@ export default function App() {
     </button>
   );
 
-  const Shell = ({ children }) => (
-    <div
-      style={{
-        minHeight: "100vh",
-        background: T.bg,
-        color: T.text,
-        fontFamily: T.body,
-        padding: "0 0 64px",
-      }}
-    >
-      <header
-        style={{
-          borderBottom: `1px solid ${T.line}`,
-          padding: "20px 24px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "baseline",
-          flexWrap: "wrap",
-          gap: 8,
-        }}
-      >
-        <div>
-          <div style={{ fontFamily: T.display, fontSize: 15, letterSpacing: "0.18em" }}>
-            <span style={{ color: T.rosso }}>■</span> CAVALLINO INDEX
-          </div>
-          <div
-            style={{
-              fontFamily: T.mono,
-              fontSize: 11,
-              color: T.dim,
-              marginTop: 6,
-              letterSpacing: "0.1em",
-            }}
-          >
-            {MODELS.map((m) => m.label).join(" · ")} — AUTOSCOUT24.CH · SVIZZERA
-          </div>
-        </div>
-        <div style={{ fontFamily: T.mono, fontSize: 11, color: T.faint }}>
-          {data ? (
-            <>
-              LAST CRAWL {data.crawled_at.slice(0, 16).replace("T", " ")} UTC ·{" "}
-              <span style={{ color: T.drop }}>●</span> LIVE
-            </>
-          ) : (
-            "CONNECTING…"
-          )}
-        </div>
-      </header>
-      {children}
-    </div>
-  );
+  if (view === "models")
+    return (
+      <Shell data={data} view={view}>
+        <ModelsPage />
+      </Shell>
+    );
 
   if (error)
     return (
-      <Shell>
+      <Shell data={data} view={view}>
         <div
           style={{
             padding: 48,
@@ -254,7 +292,7 @@ export default function App() {
 
   if (!data)
     return (
-      <Shell>
+      <Shell data={data} view={view}>
         <div style={{ padding: 48, fontFamily: T.mono, fontSize: 13, color: T.faint }}>
           Loading listings…
         </div>
@@ -262,7 +300,7 @@ export default function App() {
     );
 
   return (
-    <Shell>
+    <Shell data={data} view={view}>
       {/* KPIs */}
       <div
         style={{
