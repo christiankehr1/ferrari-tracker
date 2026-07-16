@@ -27,6 +27,32 @@ const MODELS = [
 ];
 const COLOR = Object.fromEntries(MODELS.map((m) => [m.key, m.color]));
 
+// B.I. Collection, the official Ferrari dealer in Zürich. Matched on the seller
+// id the API returns, not the name — dealers rename themselves ("… 50 Jahre"),
+// and the id is what autoscout24.ch/de/s/seller-60699 is keyed on.
+const BI_COLLECTION_ID = 60699;
+
+/** Shield badge for a B.I. Collection car. Deliberately not the prancing horse —
+ *  that mark is Ferrari's trademark — just a giallo shield with a tricolore cap.
+ *  Yellow, not rosso: the row's left accent bar is already red, and at 12px a red
+ *  shield reads as part of it. */
+const BiBadge = () => (
+  <svg
+    viewBox="0 0 12 14"
+    width={12}
+    height={14}
+    role="img"
+    aria-label="Listed by B.I. Collection"
+    style={{ marginLeft: 6, verticalAlign: "-2px", flexShrink: 0 }}
+  >
+    <title>Listed by B.I. Collection — Ferrari Zürich</title>
+    <path d="M6 .5 11.5 2v6.2c0 2.6-2.4 4.4-5.5 5.3C2.9 12.6.5 10.8.5 8.2V2Z" fill={T.giallo} />
+    <path d="M1.6 1.75 6 .55l4.4 1.2v1.1H1.6Z" fill={T.drop} />
+    <path d="M4.5 1 6 .55 7.5 1v1.85h-3Z" fill="#E8E4DA" />
+    <path d="M7.5 1 10.4 1.75v1.1H7.5Z" fill={T.rosso} />
+  </svg>
+);
+
 const chf = (n) => (n == null ? "—" : "CHF " + n.toLocaleString("de-CH"));
 const kchf = (n) => (n == null ? "—" : (n / 1000).toFixed(0) + "k");
 const day = (ts) => ts.slice(0, 10);
@@ -503,6 +529,7 @@ export default function App() {
                 }}
               >
                 {l.version}
+                {l.seller_id === BI_COLLECTION_ID && <BiBadge />}
                 <span style={{ color: T.faint, fontSize: 11, marginLeft: 8 }}>
                   {l.year} · {l.seller_city} · {l.seller_type === "private" ? "PRIV" : "PRO"}
                 </span>

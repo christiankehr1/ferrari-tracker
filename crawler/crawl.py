@@ -161,6 +161,7 @@ def main():
                 "hp": l.get("horsePower"),
                 "transmission": l.get("transmissionType"),
                 "condition": l.get("conditionType"),
+                "seller_id": seller.get("id"),
                 "seller_name": seller.get("name"),
                 "seller_type": seller.get("type"),
                 "seller_city": seller.get("city"),
