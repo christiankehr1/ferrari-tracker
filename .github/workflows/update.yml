@@ -36,6 +36,21 @@ jobs:
       - name: Crawl AutoScout24
         run: python crawler/crawl.py
 
+      # Between crawl and commit on purpose: the notified flags it sets ride
+      # along in the same data commit. No secrets set = no-op, crawl unaffected.
+      - name: Email new listings
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          NOTIFY_TO: ${{ secrets.NOTIFY_TO }}
+          NOTIFY_FROM: ${{ secrets.NOTIFY_FROM }}
+          # deploy's page_url isn't available yet — that step runs later in this
+          # job. The project-pages URL is deterministic, so derive it.
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: python crawler/notify.py
+
       - name: Commit data
         run: |
           git config user.name "ferrari-tracker"
