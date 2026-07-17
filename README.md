@@ -7,8 +7,9 @@ No servers, no database, no accounts beyond GitHub. A scheduled Action crawls, c
 ```
 GitHub Actions (hourly)
   └─ crawler/crawl.py ── AutoScout24 API
-        └─ commits data/*.{json,csv} to the repo
-              └─ builds web/ and deploys to GitHub Pages
+        └─ crawler/notify.py ── emails newly listed cars (optional)
+              └─ commits data/*.{json,csv} to the repo
+                    └─ builds web/ and deploys to GitHub Pages
 ```
 
 ## Setup
@@ -63,6 +64,29 @@ Snapshots are written on change, not on schedule, so hourly crawling doesn't blo
 **Site** (`web/`, Vite + React + Recharts)
 
 Fetches `data/dashboard.json`, which is copied next to the built site on deploy. Days-on-market comes from AutoScout's own listing creation date, so it's real from the first crawl rather than starting at zero.
+
+## Alerts
+
+Off by default. Set five secrets and every newly listed car emails you at the end of the crawl that found it.
+
+```bash
+gh secret set SMTP_HOST --body "smtp.gmail.com"
+gh secret set SMTP_PORT --body "465"          # 465 implicit TLS, or 587 STARTTLS
+gh secret set SMTP_USER --body "you@gmail.com"
+gh secret set SMTP_PASS --body "<app password>"   # not your account password
+gh secret set NOTIFY_TO --body "you@gmail.com"    # comma-separated for several
+```
+
+Gmail needs 2FA on and an [app password](https://myaccount.google.com/apppasswords) — it rejects plain account passwords over SMTP. Any SMTP host works; nothing here is Gmail-specific.
+
+`crawler/notify.py` runs after the crawl, mails the diff, and writes `notified: true` onto each listing it sent. That flag is committed, so **the repo is the delivery log** — no database, same as everything else here.
+
+Consequences worth knowing:
+
+- **The first run after switching alerts on sends nothing.** A `listings.json` where nothing is flagged is a backlog, not news, so it's adopted silently. Otherwise turning this on would mail you 300 cars that have been listed for months.
+- **A failed send doesn't mark.** The next crawl retries. A dead mailbox never costs a data point — the crawl is the product, alerts are a side-car.
+- **Unset secrets are a no-op**, not an error. The crawl publishes exactly as before.
+- **Relists ping.** A dealer deleting and re-posting a car creates a new listing ID, which reads as new. That's the same fingerprinting gap called out at the bottom of this file — alerts inherit it.
 
 ## Tuning
 

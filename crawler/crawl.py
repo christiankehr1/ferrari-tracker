@@ -176,6 +176,10 @@ def main():
                 "current_price": l.get("price"),
                 "current_mileage": l.get("mileage"),
                 "first_price": (prev or {}).get("first_price") or l.get("price"),
+                # Carried, not recomputed: this dict is rebuilt from the API every
+                # crawl, and dropping the flag would re-alert the whole fleet every
+                # hour. notify.py sets it; we only have to not lose it.
+                "notified": (prev or {}).get("notified", False),
             }
 
             # Append a snapshot only when something actually moved.
@@ -247,7 +251,7 @@ def main():
         "stats": stats,
         "listings": [
             {
-                **{k: v for k, v in l.items() if k != "misses"},
+                **{k: v for k, v in l.items() if k not in ("misses", "notified")},
                 "days_on_market": days_on_market(l),
                 "history": sorted(hist.get(l["id"], []), key=lambda x: x["ts"]),
             }

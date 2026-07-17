@@ -107,6 +107,30 @@ function buildStats(listings) {
   });
 }
 
+// The timing tower's columns are fixed px — they add up to more than a phone is
+// wide, which let the whole page slide sideways. Below this width the row drops
+// POS (the order is already the ranking) and tightens the numeric columns.
+const NARROW = "(max-width: 560px)";
+
+function useNarrow() {
+  const [narrow, setNarrow] = useState(() => window.matchMedia(NARROW).matches);
+  useEffect(() => {
+    const mq = window.matchMedia(NARROW);
+    // Read mq.matches rather than trust the event: resize also re-syncs after a
+    // mount that measured a zero-width window, which "change" never reports
+    // because the query's own value never flipped.
+    const sync = () => setNarrow(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    window.addEventListener("resize", sync);
+    return () => {
+      mq.removeEventListener("change", sync);
+      window.removeEventListener("resize", sync);
+    };
+  }, []);
+  return narrow;
+}
+
 const NAV = [
   { id: "dashboard", href: "#/", label: "DASHBOARD" },
   { id: "models", href: "#/models", label: "MODEL DIRECTORY" },
@@ -207,6 +231,17 @@ export default function App() {
   const [status, setStatus] = useState("active");
   const [open, setOpen] = useState(null);
   const [view, setView] = useState(viewFromHash);
+  const narrow = useNarrow();
+
+  // minmax(0, 1fr) rather than 1fr: a bare 1fr floors at the car name's
+  // min-content width, so the row would still push past the viewport.
+  const grid = {
+    display: "grid",
+    gridTemplateColumns: narrow
+      ? "minmax(0, 1fr) 58px 62px 52px 44px"
+      : "36px minmax(0, 1fr) 84px 96px 66px 56px",
+    gap: narrow ? 6 : 8,
+  };
 
   useEffect(() => {
     const sync = () => setView(viewFromHash());
@@ -243,10 +278,18 @@ export default function App() {
     };
   }, [listings, status]);
 
+  // The whole dashboard reads as one selection: picking a model narrows the KPIs
+  // and the chart, not just the table below them.
+  const selected = useMemo(
+    () => (model === "all" ? null : MODELS.find((m) => m.key === model)),
+    [model]
+  );
+
   const kpis = useMemo(() => {
-    const active = listings.filter((l) => l.status === "active");
+    const scope = selected ? listings.filter((l) => l.model_key === selected.key) : listings;
+    const active = scope.filter((l) => l.status === "active");
     const cuts = active.filter((l) => l.current_price < l.first_price);
-    const sold = listings.filter((l) => l.status === "delisted");
+    const sold = scope.filter((l) => l.status === "delisted");
     const fresh = active.filter((l) => l.days_on_market <= 7);
     const med = (a) => {
       if (!a.length) return 0;
@@ -258,7 +301,7 @@ export default function App() {
         label: "ON MARKET",
         value: active.length,
         // Per-model counts live on the filter tabs — five of them don't fit here.
-        sub: `across ${MODELS.length} models`,
+        sub: selected ? `${selected.label} only` : `across ${MODELS.length} models`,
       },
       { label: "LISTED < 7D", value: fresh.length, sub: "new to the market", color: T.giallo },
       { label: "PRICE CUTS", value: cuts.length, sub: "since tracking began", color: T.drop },
@@ -269,7 +312,17 @@ export default function App() {
         color: T.rosso,
       },
     ];
-  }, [listings]);
+  }, [listings, selected]);
+
+  const series = useMemo(() => (selected ? [selected] : MODELS), [selected]);
+
+  // An average needs three cars on a day to be plotted, so a thinly-listed model
+  // can have a column of nothing but gaps — draw the empty state rather than an
+  // axis with no line under it.
+  const hasTrend = useMemo(
+    () => stats.length >= 2 && stats.some((s) => series.some((m) => s[m.key] != null)),
+    [stats, series]
+  );
 
   const Tab = ({ val, cur, set, children }) => (
     <button
@@ -372,8 +425,14 @@ export default function App() {
           }}
         >
           AVERAGE ASKING PRICE · kCHF
+          {selected && (
+            <>
+              {" · "}
+              <span style={{ color: selected.color }}>{selected.label}</span>
+            </>
+          )}
         </div>
-        {stats.length < 2 ? (
+        {!hasTrend ? (
           <div
             style={{
               height: 240,
@@ -389,9 +448,19 @@ export default function App() {
               padding: 24,
             }}
           >
-            The trend line starts once prices move.
-            <br />
-            First crawl is the baseline — check back tomorrow.
+            {stats.length < 2 ? (
+              <>
+                The trend line starts once prices move.
+                <br />
+                First crawl is the baseline — check back tomorrow.
+              </>
+            ) : (
+              <>
+                Not enough {selected?.label} listings for a daily average.
+                <br />
+                A day needs three cars on the market to be plotted.
+              </>
+            )}
           </div>
         ) : (
           <>
@@ -424,7 +493,7 @@ export default function App() {
                     labelStyle={{ color: T.dim }}
                     formatter={(v, n) => [v + "k", n.toUpperCase()]}
                   />
-                  {MODELS.map((m) => (
+                  {series.map((m) => (
                     <Line
                       key={m.key}
                       type="stepAfter"
@@ -448,7 +517,7 @@ export default function App() {
                 marginTop: 4,
               }}
             >
-              {MODELS.map((m) => (
+              {series.map((m) => (
                 <span key={m.key}>
                   <span style={{ color: m.color }}>■</span> {m.label}
                 </span>
@@ -479,12 +548,10 @@ export default function App() {
       </div>
 
       {/* Timing tower */}
-      <section style={{ padding: "0 24px" }}>
+      <section style={{ padding: narrow ? "0 12px" : "0 24px" }}>
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "36px 1fr 84px 96px 66px 56px",
-            gap: 8,
+            ...grid,
             padding: "8px 12px",
             fontFamily: T.mono,
             fontSize: 10,
@@ -492,7 +559,7 @@ export default function App() {
             letterSpacing: "0.12em",
           }}
         >
-          <span>POS</span>
+          {!narrow && <span>POS</span>}
           <span>CAR</span>
           <span style={{ textAlign: "right" }}>KM</span>
           <span style={{ textAlign: "right" }}>ASK</span>
@@ -505,9 +572,7 @@ export default function App() {
             <div
               onClick={() => setOpen(open === l.id ? null : l.id)}
               style={{
-                display: "grid",
-                gridTemplateColumns: "36px 1fr 84px 96px 66px 56px",
-                gap: 8,
+                ...grid,
                 alignItems: "center",
                 padding: "10px 12px",
                 cursor: "pointer",
@@ -516,9 +581,11 @@ export default function App() {
                 borderBottom: `1px solid ${T.bg}`,
               }}
             >
-              <span style={{ fontFamily: T.mono, fontSize: 12, color: T.faint }}>
-                {String(i + 1).padStart(2, "0")}
-              </span>
+              {!narrow && (
+                <span style={{ fontFamily: T.mono, fontSize: 12, color: T.faint }}>
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              )}
               <span
                 style={{
                   fontSize: 13,
