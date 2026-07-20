@@ -79,6 +79,15 @@ gh secret set NOTIFY_TO --body "you@gmail.com"    # comma-separated for several
 
 Gmail needs 2FA on and an [app password](https://myaccount.google.com/apppasswords) — it rejects plain account passwords over SMTP. Any SMTP host works; nothing here is Gmail-specific.
 
+Verify the plumbing without waiting for a real new car — `notify.py --test` sends one sample email to `NOTIFY_TO` and touches no state:
+
+```bash
+SMTP_HOST=smtp.gmail.com SMTP_PORT=465 \
+SMTP_USER=you@gmail.com SMTP_PASS='<app password>' \
+NOTIFY_TO=zerbinoelenaz@gmail.com \
+python crawler/notify.py --test
+```
+
 `crawler/notify.py` runs after the crawl, mails the diff, and writes `notified: true` onto each listing it sent. That flag is committed, so **the repo is the delivery log** — no database, same as everything else here.
 
 Consequences worth knowing:
