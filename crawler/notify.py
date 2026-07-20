@@ -155,7 +155,44 @@ def send(subject, text, html):
             s.send_message(msg)
 
 
+def test_send():
+    """Send one real email on demand, to prove the SMTP path end to end.
+
+    Uses a genuine recent listing as the sample so the mail looks exactly like
+    the real thing, and never touches the notified flags. `notify.py --test`.
+    """
+    if not os.environ.get("SMTP_HOST"):
+        print("notify --test: SMTP_HOST unset. Set the SMTP_* / NOTIFY_TO env "
+              "vars first (see README's Alerts section).")
+        return 1
+
+    sample = None
+    if LISTINGS_F.exists():
+        active = [l for l in json.loads(LISTINGS_F.read_text()).values()
+                  if l.get("status") == "active" and l.get("current_price")]
+        if active:
+            sample = min(active, key=lambda l: l["current_price"])
+    if sample is None:
+        sample = {
+            "model_key": "f430", "version": "F430 F1", "year": 2007,
+            "current_price": 89000, "current_mileage": 42000,
+            "seller_city": "Zürich", "seller_name": "Test dealer",
+            "url": "https://www.autoscout24.ch/",
+        }
+
+    subject, text, html = render([sample])
+    subject = "[test] " + subject
+    text = "This is a test of the Cavallino Index alert. A real one looks like:\n\n" + text
+    print(f"notify --test: sending sample to {os.environ.get('NOTIFY_TO', '(NOTIFY_TO unset)')} …")
+    send(subject, text, html)
+    print("notify --test: sent. Check the inbox (and spam on first delivery).")
+    return 0
+
+
 def main():
+    if "--test" in sys.argv:
+        return test_send()
+
     if not LISTINGS_F.exists():
         print("notify: no listings.json — nothing to do.")
         return
