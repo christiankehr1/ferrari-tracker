@@ -14,7 +14,7 @@
   "seller_zip": "9524",
   "as24_created": "2022-11-14T19:59:01.805Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -22,7 +22,8 @@
   "current_price": 79800.0,
   "current_mileage": 20700,
   "first_price": 79800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "924": {
   "id": 924,
@@ -39,7 +40,7 @@
   "seller_zip": "9524",
   "as24_created": "2022-11-14T19:59:08.256Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -47,7 +48,8 @@
   "current_price": 72800.0,
   "current_mileage": 30300,
   "first_price": 72800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "4900": {
   "id": 4900,
@@ -64,7 +66,7 @@
   "seller_zip": "9524",
   "as24_created": "2022-11-14T19:59:15.308Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -72,7 +74,8 @@
   "current_price": 119800.0,
   "current_mileage": 29500,
   "first_price": 119800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "9797": {
   "id": 9797,
@@ -89,7 +92,7 @@
   "seller_zip": "9524",
   "as24_created": "2022-11-14T19:59:17.391Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -97,7 +100,8 @@
   "current_price": 73800.0,
   "current_mileage": 26200,
   "first_price": 73800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "34155": {
   "id": 34155,
@@ -114,7 +118,7 @@
   "seller_zip": "9524",
   "as24_created": "2022-11-14T19:59:21.336Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -122,7 +126,8 @@
   "current_price": 164800.0,
   "current_mileage": 4800,
   "first_price": 164800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "5957269": {
   "id": 5957269,
@@ -139,7 +144,7 @@
   "seller_zip": "9524",
   "as24_created": "2022-11-14T20:01:10.183Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -147,7 +152,8 @@
   "current_price": 399800.0,
   "current_mileage": 19600,
   "first_price": 399800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "6668649": {
   "id": 6668649,
@@ -164,7 +170,7 @@
   "seller_zip": "5604",
   "as24_created": "2022-11-14T20:01:52.357Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -172,7 +178,8 @@
   "current_price": 139000.0,
   "current_mileage": 36100,
   "first_price": 139000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "7400391": {
   "id": 7400391,
@@ -189,7 +196,7 @@
   "seller_zip": "4715",
   "as24_created": "2022-11-14T20:03:11.373Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -197,7 +204,8 @@
   "current_price": 118800.0,
   "current_mileage": 61000,
   "first_price": 118800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "8725063": {
   "id": 8725063,
@@ -214,7 +222,7 @@
   "seller_zip": "8307",
   "as24_created": "2022-11-14T20:11:28.63Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -222,7 +230,8 @@
   "current_price": 299800.0,
   "current_mileage": 38000,
   "first_price": 299800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "8994988": {
   "id": 8994988,
@@ -239,7 +248,7 @@
   "seller_zip": "8852",
   "as24_created": "2022-11-14T20:17:12.834Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -247,7 +256,8 @@
   "current_price": 1389000.0,
   "current_mileage": 1250,
   "first_price": 1389000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "9100521": {
   "id": 9100521,
@@ -264,7 +274,7 @@
   "seller_zip": "9524",
   "as24_created": "2022-11-14T20:21:26.434Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -272,7 +282,8 @@
   "current_price": 114800.0,
   "current_mileage": 77777,
   "first_price": 114800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "10180034": {
   "id": 10180034,
@@ -289,7 +300,7 @@
   "seller_zip": "8807",
   "as24_created": "2023-01-17T12:30:01.403Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -297,7 +308,8 @@
   "current_price": 261900.0,
   "current_mileage": 6750,
   "first_price": 261900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "10248534": {
   "id": 10248534,
@@ -314,7 +326,7 @@
   "seller_zip": "3429",
   "as24_created": "2023-02-10T15:24:01.644Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -322,7 +334,8 @@
   "current_price": 299950.0,
   "current_mileage": 47000,
   "first_price": 299950.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "10259257": {
   "id": 10259257,
@@ -339,7 +352,7 @@
   "seller_zip": "1030",
   "as24_created": "2023-02-14T17:43:00.589Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -347,7 +360,8 @@
   "current_price": 333900.0,
   "current_mileage": 29900,
   "first_price": 333900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "10292009": {
   "id": 10292009,
@@ -364,7 +378,7 @@
   "seller_zip": "9524",
   "as24_created": "2023-02-26T02:51:45.078Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -372,7 +386,8 @@
   "current_price": 69800.0,
   "current_mileage": 63800,
   "first_price": 69800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "10319792": {
   "id": 10319792,
@@ -389,7 +404,7 @@
   "seller_zip": "1202",
   "as24_created": "2023-03-07T06:54:02.558Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -397,7 +412,8 @@
   "current_price": 129000.0,
   "current_mileage": 10000,
   "first_price": 129000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "10354868": {
   "id": 10354868,
@@ -414,7 +430,7 @@
   "seller_zip": "8807",
   "as24_created": "2023-03-17T10:55:02.441Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -422,7 +438,8 @@
   "current_price": 789000.0,
   "current_mileage": 500,
   "first_price": 789000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "10719281": {
   "id": 10719281,
@@ -439,7 +456,7 @@
   "seller_zip": "9524",
   "as24_created": "2023-07-22T14:20:20.366Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -447,7 +464,8 @@
   "current_price": 114800.0,
   "current_mileage": 26400,
   "first_price": 114800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "10735104": {
   "id": 10735104,
@@ -464,7 +482,7 @@
   "seller_zip": "6418",
   "as24_created": "2023-07-29T21:54:10.359Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -472,7 +490,8 @@
   "current_price": 279999.0,
   "current_mileage": 7500,
   "first_price": 279999.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "10773974": {
   "id": 10773974,
@@ -489,7 +508,7 @@
   "seller_zip": "1844",
   "as24_created": "2023-08-16T08:37:41.548Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -497,7 +516,8 @@
   "current_price": 89000.0,
   "current_mileage": 73313,
   "first_price": 89000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "10782952": {
   "id": 10782952,
@@ -514,7 +534,7 @@
   "seller_zip": "8181",
   "as24_created": "2023-08-19T06:31:31.028Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -522,7 +542,8 @@
   "current_price": 261000.0,
   "current_mileage": 51000,
   "first_price": 261000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "10822087": {
   "id": 10822087,
@@ -539,7 +560,7 @@
   "seller_zip": "6331",
   "as24_created": "2023-09-02T11:01:20.511Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -547,7 +568,8 @@
   "current_price": 570000.0,
   "current_mileage": 6155,
   "first_price": 570000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11134556": {
   "id": 11134556,
@@ -564,7 +586,7 @@
   "seller_zip": "4715",
   "as24_created": "2023-12-29T14:56:30.776Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -572,7 +594,8 @@
   "current_price": 148800.0,
   "current_mileage": 99900,
   "first_price": 148800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11136893": {
   "id": 11136893,
@@ -589,7 +612,7 @@
   "seller_zip": "8494",
   "as24_created": "2023-12-31T11:36:20.445Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -597,7 +620,8 @@
   "current_price": 93980.0,
   "current_mileage": 94000,
   "first_price": 93980.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11145561": {
   "id": 11145561,
@@ -614,7 +638,7 @@
   "seller_zip": "6915",
   "as24_created": "2024-01-05T15:37:40.472Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -622,7 +646,8 @@
   "current_price": 156000.0,
   "current_mileage": 15700,
   "first_price": 156000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11145582": {
   "id": 11145582,
@@ -639,7 +664,7 @@
   "seller_zip": "6915",
   "as24_created": "2024-01-05T15:41:10.53Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -647,7 +672,8 @@
   "current_price": 167000.0,
   "current_mileage": 17800,
   "first_price": 167000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11221977": {
   "id": 11221977,
@@ -664,7 +690,7 @@
   "seller_zip": "6933",
   "as24_created": "2024-01-31T17:02:10.703Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -672,7 +698,8 @@
   "current_price": 399900.0,
   "current_mileage": 2378,
   "first_price": 399900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11239408": {
   "id": 11239408,
@@ -689,7 +716,7 @@
   "seller_zip": "4922",
   "as24_created": "2024-02-06T09:01:50.369Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -697,7 +724,8 @@
   "current_price": 194900.0,
   "current_mileage": 45000,
   "first_price": 194900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11250072": {
   "id": 11250072,
@@ -714,7 +742,7 @@
   "seller_zip": "8807",
   "as24_created": "2024-02-08T15:16:30.943Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -722,7 +750,8 @@
   "current_price": 446500.0,
   "current_mileage": 3000,
   "first_price": 446500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11273741": {
   "id": 11273741,
@@ -739,7 +768,7 @@
   "seller_zip": "9430",
   "as24_created": "2024-02-15T10:27:50.8Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -747,7 +776,8 @@
   "current_price": 469000.0,
   "current_mileage": 7600,
   "first_price": 469000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11293084": {
   "id": 11293084,
@@ -764,7 +794,7 @@
   "seller_zip": "2900",
   "as24_created": "2024-02-21T14:11:21.701Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -772,7 +802,8 @@
   "current_price": 598500.0,
   "current_mileage": 98,
   "first_price": 598500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11297872": {
   "id": 11297872,
@@ -789,7 +820,7 @@
   "seller_zip": "3178",
   "as24_created": "2024-02-22T15:18:53.279Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -797,7 +828,8 @@
   "current_price": 489990.0,
   "current_mileage": 5500,
   "first_price": 489990.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11337401": {
   "id": 11337401,
@@ -814,7 +846,7 @@
   "seller_zip": "1219",
   "as24_created": "2024-03-06T15:25:21.155Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -822,7 +854,8 @@
   "current_price": 69900.0,
   "current_mileage": 41628,
   "first_price": 69900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11405772": {
   "id": 11405772,
@@ -839,7 +872,7 @@
   "seller_zip": "1800",
   "as24_created": "2024-03-29T12:01:40.946Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -847,7 +880,8 @@
   "current_price": 600000.0,
   "current_mileage": 37000,
   "first_price": 600000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11412351": {
   "id": 11412351,
@@ -864,7 +898,7 @@
   "seller_zip": "8910",
   "as24_created": "2024-04-02T13:16:01.934Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -872,7 +906,8 @@
   "current_price": 259900.0,
   "current_mileage": 22000,
   "first_price": 259900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11492285": {
   "id": 11492285,
@@ -889,7 +924,7 @@
   "seller_zip": "8902",
   "as24_created": "2024-05-02T16:00:33.728Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -897,7 +932,8 @@
   "current_price": 399000.0,
   "current_mileage": 7500,
   "first_price": 399000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11510367": {
   "id": 11510367,
@@ -914,7 +950,7 @@
   "seller_zip": "1272",
   "as24_created": "2024-05-06T13:32:21.095Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -922,7 +958,8 @@
   "current_price": 397900.0,
   "current_mileage": 16590,
   "first_price": 397900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11581484": {
   "id": 11581484,
@@ -939,7 +976,7 @@
   "seller_zip": "4052",
   "as24_created": "2024-06-05T09:48:58.379Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -947,7 +984,8 @@
   "current_price": 345000.0,
   "current_mileage": 13600,
   "first_price": 345000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11594418": {
   "id": 11594418,
@@ -964,7 +1002,7 @@
   "seller_zip": "9063",
   "as24_created": "2024-06-09T16:04:12.132Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -972,7 +1010,8 @@
   "current_price": 319000.0,
   "current_mileage": 8300,
   "first_price": 319000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11690324": {
   "id": 11690324,
@@ -989,7 +1028,7 @@
   "seller_zip": "3054",
   "as24_created": "2024-07-15T10:35:03.975Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -997,7 +1036,8 @@
   "current_price": 780000.0,
   "current_mileage": 900,
   "first_price": 780000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11704607": {
   "id": 11704607,
@@ -1014,7 +1054,7 @@
   "seller_zip": "6340",
   "as24_created": "2024-07-21T11:56:37.146Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1022,7 +1062,8 @@
   "current_price": 344500.0,
   "current_mileage": 9800,
   "first_price": 344500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11732374": {
   "id": 11732374,
@@ -1039,7 +1080,7 @@
   "seller_zip": "1228",
   "as24_created": "2024-08-05T15:36:01.802Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1047,7 +1088,8 @@
   "current_price": 179900.0,
   "current_mileage": 9900,
   "first_price": 179900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11733081": {
   "id": 11733081,
@@ -1064,7 +1106,7 @@
   "seller_zip": "2544",
   "as24_created": "2024-08-05T17:30:21.464Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1072,7 +1114,8 @@
   "current_price": 199430.0,
   "current_mileage": 55000,
   "first_price": 199430.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11744722": {
   "id": 11744722,
@@ -1089,7 +1132,7 @@
   "seller_zip": "3930",
   "as24_created": "2024-08-06T11:19:10.812Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1097,7 +1140,8 @@
   "current_price": 115000.0,
   "current_mileage": 54000,
   "first_price": 115000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11746468": {
   "id": 11746468,
@@ -1114,7 +1158,7 @@
   "seller_zip": "8953",
   "as24_created": "2024-08-10T12:57:31.884Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1122,7 +1166,8 @@
   "current_price": 219000.0,
   "current_mileage": 62000,
   "first_price": 219000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11747208": {
   "id": 11747208,
@@ -1139,7 +1184,7 @@
   "seller_zip": "5745",
   "as24_created": "2024-08-10T19:48:39.218Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1147,7 +1192,8 @@
   "current_price": 89000.0,
   "current_mileage": 97000,
   "first_price": 89000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11792633": {
   "id": 11792633,
@@ -1164,7 +1210,7 @@
   "seller_zip": "2900",
   "as24_created": "2024-08-28T14:10:37.546Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1172,7 +1218,8 @@
   "current_price": 128500.0,
   "current_mileage": 44800,
   "first_price": 128500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11824485": {
   "id": 11824485,
@@ -1189,7 +1236,7 @@
   "seller_zip": "8413",
   "as24_created": "2024-09-09T11:47:53.837Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1197,7 +1244,8 @@
   "current_price": 249790.0,
   "current_mileage": 36000,
   "first_price": 249790.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11833268": {
   "id": 11833268,
@@ -1214,7 +1262,7 @@
   "seller_zip": "8048",
   "as24_created": "2024-09-12T13:12:51.608Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1222,7 +1270,8 @@
   "current_price": 680000.0,
   "current_mileage": 2300,
   "first_price": 680000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11836889": {
   "id": 11836889,
@@ -1264,7 +1313,7 @@
   "seller_zip": "1122",
   "as24_created": "2024-09-19T13:03:48.252Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1272,7 +1321,8 @@
   "current_price": 95000.0,
   "current_mileage": 85800,
   "first_price": 95000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11854322": {
   "id": 11854322,
@@ -1289,7 +1339,7 @@
   "seller_zip": "3297",
   "as24_created": "2024-09-20T18:15:35.236Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1297,7 +1347,8 @@
   "current_price": 75000.0,
   "current_mileage": 37500,
   "first_price": 75000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11871999": {
   "id": 11871999,
@@ -1314,7 +1365,7 @@
   "seller_zip": "6340",
   "as24_created": "2024-09-28T11:32:19.08Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1322,7 +1373,8 @@
   "current_price": 397500.0,
   "current_mileage": 2700,
   "first_price": 397500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11908760": {
   "id": 11908760,
@@ -1339,7 +1391,7 @@
   "seller_zip": "8807",
   "as24_created": "2024-10-13T21:10:51.049Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1347,7 +1399,8 @@
   "current_price": 90000.0,
   "current_mileage": 89000,
   "first_price": 90000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11942372": {
   "id": 11942372,
@@ -1364,7 +1417,7 @@
   "seller_zip": "6048",
   "as24_created": "2024-10-24T13:59:20.365Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1372,7 +1425,8 @@
   "current_price": 350000.0,
   "current_mileage": 2,
   "first_price": 350000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11964162": {
   "id": 11964162,
@@ -1389,7 +1443,7 @@
   "seller_zip": "6915",
   "as24_created": "2024-11-05T11:52:29.484Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1397,7 +1451,8 @@
   "current_price": 146000.0,
   "current_mileage": 23100,
   "first_price": 146000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11964252": {
   "id": 11964252,
@@ -1414,7 +1469,7 @@
   "seller_zip": "6915",
   "as24_created": "2024-11-05T11:55:23.48Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1422,7 +1477,8 @@
   "current_price": 172000.0,
   "current_mileage": 10501,
   "first_price": 172000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "11987617": {
   "id": 11987617,
@@ -1439,7 +1495,7 @@
   "seller_zip": "2300",
   "as24_created": "2024-11-14T08:20:15.061Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1447,7 +1503,8 @@
   "current_price": 122900.0,
   "current_mileage": 70000,
   "first_price": 122900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12004422": {
   "id": 12004422,
@@ -1464,7 +1521,7 @@
   "seller_zip": "1950",
   "as24_created": "2024-11-20T16:56:52.702Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1472,7 +1529,8 @@
   "current_price": 408800.0,
   "current_mileage": 18300,
   "first_price": 408800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12054470": {
   "id": 12054470,
@@ -1489,7 +1547,7 @@
   "seller_zip": "1950",
   "as24_created": "2024-12-10T12:51:14.718Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1497,7 +1555,8 @@
   "current_price": 394900.0,
   "current_mileage": 54200,
   "first_price": 394900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12078129": {
   "id": 12078129,
@@ -1514,7 +1573,7 @@
   "seller_zip": "1950",
   "as24_created": "2024-12-19T10:25:55.465Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1522,7 +1581,8 @@
   "current_price": 349900.0,
   "current_mileage": 8900,
   "first_price": 349900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12097764": {
   "id": 12097764,
@@ -1539,7 +1599,7 @@
   "seller_zip": "1870",
   "as24_created": "2024-12-27T13:55:44.168Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1547,7 +1607,8 @@
   "current_price": 198500.0,
   "current_mileage": 45700,
   "first_price": 198500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12137216": {
   "id": 12137216,
@@ -1564,7 +1625,7 @@
   "seller_zip": "6340",
   "as24_created": "2025-01-19T16:59:36.163Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1572,7 +1633,8 @@
   "current_price": 427500.0,
   "current_mileage": 50,
   "first_price": 427500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12171835": {
   "id": 12171835,
@@ -1589,7 +1651,7 @@
   "seller_zip": "8807",
   "as24_created": "2025-02-01T10:02:17.807Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1597,7 +1659,8 @@
   "current_price": 249900.0,
   "current_mileage": 18987,
   "first_price": 249900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12219317": {
   "id": 12219317,
@@ -1614,7 +1677,7 @@
   "seller_zip": "4802",
   "as24_created": "2025-02-18T16:25:01.781Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1622,7 +1685,8 @@
   "current_price": 251999.0,
   "current_mileage": 25500,
   "first_price": 251999.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12229506": {
   "id": 12229506,
@@ -1639,7 +1703,7 @@
   "seller_zip": "8184",
   "as24_created": "2025-02-21T17:14:01.361Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1647,7 +1711,8 @@
   "current_price": 118800.0,
   "current_mileage": 52800,
   "first_price": 118800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12258124": {
   "id": 12258124,
@@ -1664,7 +1729,7 @@
   "seller_zip": "8717",
   "as24_created": "2025-03-04T07:56:12.542Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1672,7 +1737,8 @@
   "current_price": 110900.0,
   "current_mileage": 47900,
   "first_price": 114900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12265831": {
   "id": 12265831,
@@ -1689,7 +1755,7 @@
   "seller_zip": "4052",
   "as24_created": "2025-03-06T12:57:56.915Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1697,7 +1763,8 @@
   "current_price": 479000.0,
   "current_mileage": 499,
   "first_price": 479000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12280226": {
   "id": 12280226,
@@ -1714,7 +1781,7 @@
   "seller_zip": "9500",
   "as24_created": "2025-03-11T08:03:21.219Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1722,7 +1789,8 @@
   "current_price": 109800.0,
   "current_mileage": 53500,
   "first_price": 109800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12284117": {
   "id": 12284117,
@@ -1739,7 +1807,7 @@
   "seller_zip": "6205",
   "as24_created": "2025-03-12T09:48:04.916Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1747,7 +1815,8 @@
   "current_price": 107900.0,
   "current_mileage": 79900,
   "first_price": 107900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12301619": {
   "id": 12301619,
@@ -1764,7 +1833,7 @@
   "seller_zip": "6206",
   "as24_created": "2025-03-18T09:12:33.175Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1772,7 +1841,8 @@
   "current_price": 399990.0,
   "current_mileage": 700,
   "first_price": 399990.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12318626": {
   "id": 12318626,
@@ -1789,7 +1859,7 @@
   "seller_zip": "5702",
   "as24_created": "2025-03-23T16:49:25.007Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1797,7 +1867,8 @@
   "current_price": 84800.0,
   "current_mileage": 32000,
   "first_price": 84800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12325128": {
   "id": 12325128,
@@ -1814,7 +1885,7 @@
   "seller_zip": "6932",
   "as24_created": "2025-03-25T18:41:07.894Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1822,7 +1893,8 @@
   "current_price": 1899999.0,
   "current_mileage": 100,
   "first_price": 1899999.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12325936": {
   "id": 12325936,
@@ -1839,7 +1911,7 @@
   "seller_zip": "1206",
   "as24_created": "2025-03-26T09:25:56.929Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1847,7 +1919,8 @@
   "current_price": 215000.0,
   "current_mileage": 19900,
   "first_price": 215000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12342264": {
   "id": 12342264,
@@ -1864,7 +1937,7 @@
   "seller_zip": "8000",
   "as24_created": "2025-03-31T20:18:51.236Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1872,7 +1945,8 @@
   "current_price": 145000.0,
   "current_mileage": 2500,
   "first_price": 145000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12408488": {
   "id": 12408488,
@@ -1889,7 +1963,7 @@
   "seller_zip": "5000",
   "as24_created": "2025-04-26T12:51:24.358Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1897,7 +1971,8 @@
   "current_price": 298200.0,
   "current_mileage": 24400,
   "first_price": 298200.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12451650": {
   "id": 12451650,
@@ -1914,7 +1989,7 @@
   "seller_zip": "1228",
   "as24_created": "2025-05-13T08:01:20.719Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1922,7 +1997,8 @@
   "current_price": 344900.0,
   "current_mileage": 1650,
   "first_price": 344900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12453099": {
   "id": 12453099,
@@ -1939,7 +2015,7 @@
   "seller_zip": "4127",
   "as24_created": "2025-05-13T14:00:14.373Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1947,7 +2023,8 @@
   "current_price": 515000.0,
   "current_mileage": 97,
   "first_price": 515000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12457450": {
   "id": 12457450,
@@ -1964,7 +2041,7 @@
   "seller_zip": "6317",
   "as24_created": "2025-05-14T21:43:24.295Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1972,7 +2049,8 @@
   "current_price": 429000.0,
   "current_mileage": 2200,
   "first_price": 429000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12476583": {
   "id": 12476583,
@@ -1989,7 +2067,7 @@
   "seller_zip": "8902",
   "as24_created": "2025-05-21T18:41:06.503Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -1997,7 +2075,8 @@
   "current_price": 369000.0,
   "current_mileage": 3700,
   "first_price": 369000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12480392": {
   "id": 12480392,
@@ -2014,7 +2093,7 @@
   "seller_zip": "9493",
   "as24_created": "2025-05-23T11:25:52.515Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2022,7 +2101,8 @@
   "current_price": 160000.0,
   "current_mileage": 11000,
   "first_price": 160000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12482785": {
   "id": 12482785,
@@ -2039,7 +2119,7 @@
   "seller_zip": "9220",
   "as24_created": "2025-05-24T09:05:31.302Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2047,7 +2127,8 @@
   "current_price": 399900.0,
   "current_mileage": 4350,
   "first_price": 399900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12487984": {
   "id": 12487984,
@@ -2064,7 +2145,7 @@
   "seller_zip": "1950",
   "as24_created": "2025-05-26T12:01:27.401Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2072,7 +2153,8 @@
   "current_price": 469000.0,
   "current_mileage": 7400,
   "first_price": 469000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12490546": {
   "id": 12490546,
@@ -2089,7 +2171,7 @@
   "seller_zip": "1213",
   "as24_created": "2025-05-27T09:49:02.465Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2097,7 +2179,8 @@
   "current_price": 559900.0,
   "current_mileage": 3900,
   "first_price": 559900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12502980": {
   "id": 12502980,
@@ -2114,7 +2197,7 @@
   "seller_zip": "8807",
   "as24_created": "2025-06-02T11:28:55.055Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2122,7 +2205,8 @@
   "current_price": 219500.0,
   "current_mileage": 18997,
   "first_price": 219500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12507349": {
   "id": 12507349,
@@ -2139,7 +2223,7 @@
   "seller_zip": "9220",
   "as24_created": "2025-06-03T16:19:04.807Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2147,7 +2231,8 @@
   "current_price": 649900.0,
   "current_mileage": 290,
   "first_price": 649900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12508689": {
   "id": 12508689,
@@ -2164,7 +2249,7 @@
   "seller_zip": "6340",
   "as24_created": "2025-06-04T09:25:33.333Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2172,7 +2257,8 @@
   "current_price": 620000.0,
   "current_mileage": 15500,
   "first_price": 620000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12510817": {
   "id": 12510817,
@@ -2189,7 +2275,7 @@
   "seller_zip": "3961",
   "as24_created": "2025-06-04T20:11:43.494Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2197,7 +2283,8 @@
   "current_price": 333000.0,
   "current_mileage": 4357,
   "first_price": 333000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12513548": {
   "id": 12513548,
@@ -2214,7 +2301,7 @@
   "seller_zip": "6012",
   "as24_created": "2025-06-05T19:36:19.341Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2222,7 +2309,8 @@
   "current_price": 209999.0,
   "current_mileage": 80000,
   "first_price": 209999.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12517790": {
   "id": 12517790,
@@ -2239,7 +2327,7 @@
   "seller_zip": "6317",
   "as24_created": "2025-06-07T12:15:32.143Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2247,7 +2335,8 @@
   "current_price": 370000.0,
   "current_mileage": 10800,
   "first_price": 370000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12528685": {
   "id": 12528685,
@@ -2264,7 +2353,7 @@
   "seller_zip": "1196",
   "as24_created": "2025-06-12T11:36:24.87Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2272,7 +2361,8 @@
   "current_price": 299900.0,
   "current_mileage": 19700,
   "first_price": 299900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12593613": {
   "id": 12593613,
@@ -2289,7 +2379,7 @@
   "seller_zip": "8048",
   "as24_created": "2025-07-07T15:05:10.694Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2297,7 +2387,8 @@
   "current_price": 1890000.0,
   "current_mileage": 2400,
   "first_price": 1890000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12603415": {
   "id": 12603415,
@@ -2314,7 +2405,7 @@
   "seller_zip": "8280",
   "as24_created": "2025-07-11T08:32:45.008Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2322,7 +2413,8 @@
   "current_price": 356900.0,
   "current_mileage": 650,
   "first_price": 356900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12613868": {
   "id": 12613868,
@@ -2339,7 +2431,7 @@
   "seller_zip": "8309",
   "as24_created": "2025-07-15T14:02:26.807Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2347,7 +2439,8 @@
   "current_price": 519890.0,
   "current_mileage": 13566,
   "first_price": 519890.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12614914": {
   "id": 12614914,
@@ -2364,7 +2457,7 @@
   "seller_zip": "2900",
   "as24_created": "2025-07-16T07:08:34.935Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2372,7 +2465,8 @@
   "current_price": 356500.0,
   "current_mileage": 3250,
   "first_price": 356500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12623187": {
   "id": 12623187,
@@ -2389,7 +2483,7 @@
   "seller_zip": "1950",
   "as24_created": "2025-07-19T08:04:33.379Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2397,7 +2491,8 @@
   "current_price": 435000.0,
   "current_mileage": 2900,
   "first_price": 435000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12633838": {
   "id": 12633838,
@@ -2414,7 +2509,7 @@
   "seller_zip": "6340",
   "as24_created": "2025-07-24T06:59:10.579Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2422,7 +2517,8 @@
   "current_price": 329000.0,
   "current_mileage": 9900,
   "first_price": 329000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12638384": {
   "id": 12638384,
@@ -2439,7 +2535,7 @@
   "seller_zip": "6900",
   "as24_created": "2025-07-25T18:08:50.753Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2447,7 +2543,8 @@
   "current_price": 320000.0,
   "current_mileage": 15000,
   "first_price": 320000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12646611": {
   "id": 12646611,
@@ -2464,7 +2561,7 @@
   "seller_zip": "8143",
   "as24_created": "2025-07-30T10:02:56.165Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2472,7 +2569,8 @@
   "current_price": 249900.0,
   "current_mileage": 40900,
   "first_price": 249900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12656723": {
   "id": 12656723,
@@ -2489,7 +2587,7 @@
   "seller_zip": "6370",
   "as24_created": "2025-08-05T12:06:43.598Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2497,7 +2595,8 @@
   "current_price": 74800.0,
   "current_mileage": 41300,
   "first_price": 74800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12659794": {
   "id": 12659794,
@@ -2514,7 +2613,7 @@
   "seller_zip": "3178",
   "as24_created": "2025-08-06T17:02:24.683Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2522,7 +2621,8 @@
   "current_price": 224990.0,
   "current_mileage": 44000,
   "first_price": 224990.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12667009": {
   "id": 12667009,
@@ -2539,7 +2639,7 @@
   "seller_zip": "8153",
   "as24_created": "2025-08-09T15:51:52.754Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2547,7 +2647,8 @@
   "current_price": 489900.0,
   "current_mileage": 9000,
   "first_price": 489900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12670307": {
   "id": 12670307,
@@ -2564,7 +2665,7 @@
   "seller_zip": "5634",
   "as24_created": "2025-08-11T15:09:53.331Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2572,7 +2673,8 @@
   "current_price": 469000.0,
   "current_mileage": 2290,
   "first_price": 469000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12692682": {
   "id": 12692682,
@@ -2589,7 +2691,7 @@
   "seller_zip": "1207",
   "as24_created": "2025-08-20T15:06:08.405Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2597,7 +2699,8 @@
   "current_price": 128000.0,
   "current_mileage": 48000,
   "first_price": 128000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12700717": {
   "id": 12700717,
@@ -2614,7 +2717,7 @@
   "seller_zip": "6014",
   "as24_created": "2025-08-23T13:17:40.85Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2622,7 +2725,8 @@
   "current_price": 134900.0,
   "current_mileage": 23400,
   "first_price": 134900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12705266": {
   "id": 12705266,
@@ -2639,7 +2743,7 @@
   "seller_zip": "1950",
   "as24_created": "2025-08-25T16:37:57.657Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2647,7 +2751,8 @@
   "current_price": 84900.0,
   "current_mileage": 53500,
   "first_price": 84900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12723690": {
   "id": 12723690,
@@ -2664,7 +2769,7 @@
   "seller_zip": "2557",
   "as24_created": "2025-09-01T16:51:06.329Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2672,7 +2777,8 @@
   "current_price": 389000.0,
   "current_mileage": 14500,
   "first_price": 389000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12724060": {
   "id": 12724060,
@@ -2689,7 +2795,7 @@
   "seller_zip": "8181",
   "as24_created": "2025-08-29T16:28:21.501Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2697,7 +2803,8 @@
   "current_price": 98500.0,
   "current_mileage": 83500,
   "first_price": 98500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12724731": {
   "id": 12724731,
@@ -2714,7 +2821,7 @@
   "seller_zip": "6340",
   "as24_created": "2025-09-02T08:17:36.415Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2722,7 +2829,8 @@
   "current_price": 428000.0,
   "current_mileage": 21600,
   "first_price": 428000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12734466": {
   "id": 12734466,
@@ -2739,7 +2847,7 @@
   "seller_zip": "4900",
   "as24_created": "2025-09-05T09:44:06.499Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2747,7 +2855,8 @@
   "current_price": 199000.0,
   "current_mileage": 82000,
   "first_price": 199000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12749331": {
   "id": 12749331,
@@ -2764,7 +2873,7 @@
   "seller_zip": "1845",
   "as24_created": "2025-09-10T22:01:54.913Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2772,7 +2881,8 @@
   "current_price": 109900.0,
   "current_mileage": 54361,
   "first_price": 109900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12750245": {
   "id": 12750245,
@@ -2789,7 +2899,7 @@
   "seller_zip": "8217",
   "as24_created": "2025-09-11T09:28:00.31Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2797,7 +2907,8 @@
   "current_price": 105000.0,
   "current_mileage": 45000,
   "first_price": 105000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12765709": {
   "id": 12765709,
@@ -2814,7 +2925,7 @@
   "seller_zip": "8800",
   "as24_created": "2025-09-15T07:48:01.501Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2822,7 +2933,8 @@
   "current_price": 449900.0,
   "current_mileage": 24900,
   "first_price": 449900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12778288": {
   "id": 12778288,
@@ -2839,7 +2951,7 @@
   "seller_zip": "9524",
   "as24_created": "2025-09-22T08:40:18.966Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2847,7 +2959,8 @@
   "current_price": 349800.0,
   "current_mileage": 42900,
   "first_price": 349800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12820751": {
   "id": 12820751,
@@ -2864,7 +2977,7 @@
   "seller_zip": "6915",
   "as24_created": "2025-10-08T14:15:38.107Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2872,7 +2985,8 @@
   "current_price": 454000.0,
   "current_mileage": 7000,
   "first_price": 454000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12820848": {
   "id": 12820848,
@@ -2889,7 +3003,7 @@
   "seller_zip": "1228",
   "as24_created": "2025-10-08T14:41:18.891Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2897,7 +3011,8 @@
   "current_price": 349500.0,
   "current_mileage": 7900,
   "first_price": 349500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12830212": {
   "id": 12830212,
@@ -2914,7 +3029,7 @@
   "seller_zip": "6743",
   "as24_created": "2025-10-12T09:07:34.455Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2922,7 +3037,8 @@
   "current_price": 79900.0,
   "current_mileage": 66500,
   "first_price": 79900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12831522": {
   "id": 12831522,
@@ -2939,7 +3055,7 @@
   "seller_zip": "8808",
   "as24_created": "2025-10-13T08:09:30.735Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2947,7 +3063,8 @@
   "current_price": 1390000.0,
   "current_mileage": 2000,
   "first_price": 1390000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12837510": {
   "id": 12837510,
@@ -2964,7 +3081,7 @@
   "seller_zip": "3429",
   "as24_created": "2025-10-15T12:41:54.302Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2972,7 +3089,8 @@
   "current_price": 450000.0,
   "current_mileage": 18000,
   "first_price": 450000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12846928": {
   "id": 12846928,
@@ -2989,7 +3107,7 @@
   "seller_zip": "3280",
   "as24_created": "2025-10-17T15:02:32.485Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -2997,7 +3115,8 @@
   "current_price": 158990.0,
   "current_mileage": 72000,
   "first_price": 158990.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12849613": {
   "id": 12849613,
@@ -3014,7 +3133,7 @@
   "seller_zip": "9323",
   "as24_created": "2025-10-18T19:41:12.744Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3022,7 +3141,8 @@
   "current_price": 199000.0,
   "current_mileage": 36800,
   "first_price": 199000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12851518": {
   "id": 12851518,
@@ -3039,7 +3159,7 @@
   "seller_zip": "6340",
   "as24_created": "2025-10-20T08:47:57.251Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3047,7 +3167,8 @@
   "current_price": 359000.0,
   "current_mileage": 17000,
   "first_price": 359000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12855436": {
   "id": 12855436,
@@ -3064,7 +3185,7 @@
   "seller_zip": "8048",
   "as24_created": "2025-10-21T13:14:04.671Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3072,7 +3193,8 @@
   "current_price": 258000.0,
   "current_mileage": 11500,
   "first_price": 258000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12862649": {
   "id": 12862649,
@@ -3089,7 +3211,7 @@
   "seller_zip": "3661",
   "as24_created": "2025-10-23T19:15:13.802Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3097,7 +3219,8 @@
   "current_price": 109900.0,
   "current_mileage": 123,
   "first_price": 109900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12894323": {
   "id": 12894323,
@@ -3114,7 +3237,7 @@
   "seller_zip": "6915",
   "as24_created": "2025-11-05T10:21:22.179Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3122,7 +3245,8 @@
   "current_price": 660000.0,
   "current_mileage": 1500,
   "first_price": 660000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12895667": {
   "id": 12895667,
@@ -3139,7 +3263,7 @@
   "seller_zip": "6964",
   "as24_created": "2025-11-05T16:01:56.694Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3147,7 +3271,8 @@
   "current_price": 409900.0,
   "current_mileage": 15100,
   "first_price": 409900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12899867": {
   "id": 12899867,
@@ -3164,7 +3289,7 @@
   "seller_zip": "8808",
   "as24_created": "2025-11-05T14:43:40.177Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3172,7 +3297,8 @@
   "current_price": 388900.0,
   "current_mileage": 6850,
   "first_price": 388900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12904844": {
   "id": 12904844,
@@ -3189,7 +3315,7 @@
   "seller_zip": "9063",
   "as24_created": "2025-11-08T15:29:54.233Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3197,7 +3323,8 @@
   "current_price": 610000.0,
   "current_mileage": 560,
   "first_price": 610000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12913683": {
   "id": 12913683,
@@ -3214,7 +3341,7 @@
   "seller_zip": "3960",
   "as24_created": "2025-11-12T13:05:38.334Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3222,7 +3349,8 @@
   "current_price": 215900.0,
   "current_mileage": 42900,
   "first_price": 215900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "12922090": {
   "id": 12922090,
@@ -3239,7 +3367,7 @@
   "seller_zip": "9443",
   "as24_created": "2025-11-14T13:40:19.149Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3247,7 +3375,8 @@
   "current_price": 169500.0,
   "current_mileage": 154500,
   "first_price": 169500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20000998": {
   "id": 20000998,
@@ -3264,7 +3393,7 @@
   "seller_zip": "9300",
   "as24_created": "2025-11-17T13:55:12.366Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3272,7 +3401,8 @@
   "current_price": 108500.0,
   "current_mileage": 32650,
   "first_price": 108500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20003158": {
   "id": 20003158,
@@ -3289,7 +3419,7 @@
   "seller_zip": "6915",
   "as24_created": "2025-11-18T10:20:12.563Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3297,7 +3427,8 @@
   "current_price": 399000.0,
   "current_mileage": 16000,
   "first_price": 399000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20011728": {
   "id": 20011728,
@@ -3314,7 +3445,7 @@
   "seller_zip": "9524",
   "as24_created": "2025-11-21T08:59:04.834Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3322,7 +3453,8 @@
   "current_price": 84800.0,
   "current_mileage": 117750,
   "first_price": 84800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20018232": {
   "id": 20018232,
@@ -3339,7 +3471,7 @@
   "seller_zip": "6915",
   "as24_created": "2025-11-24T14:38:14.618Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3347,7 +3479,8 @@
   "current_price": 435000.0,
   "current_mileage": 12000,
   "first_price": 435000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20041170": {
   "id": 20041170,
@@ -3364,7 +3497,7 @@
   "seller_zip": "6390",
   "as24_created": "2025-12-03T12:28:58.099Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3372,7 +3505,8 @@
   "current_price": 82500.0,
   "current_mileage": 63500,
   "first_price": 82500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20045590": {
   "id": 20045590,
@@ -3389,7 +3523,7 @@
   "seller_zip": "8153",
   "as24_created": "2025-12-04T17:19:53.817Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3397,7 +3531,8 @@
   "current_price": 899900.0,
   "current_mileage": 5700,
   "first_price": 899900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20052574": {
   "id": 20052574,
@@ -3439,7 +3574,7 @@
   "seller_zip": "7500",
   "as24_created": "2025-12-09T12:22:54.891Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3447,7 +3582,8 @@
   "current_price": 479000.0,
   "current_mileage": 5600,
   "first_price": 479000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20056432": {
   "id": 20056432,
@@ -3464,7 +3600,7 @@
   "seller_zip": "8340",
   "as24_created": "2025-12-09T16:45:36.597Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3472,7 +3608,8 @@
   "current_price": 73360.0,
   "current_mileage": 47900,
   "first_price": 73360.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20057030": {
   "id": 20057030,
@@ -3489,7 +3626,7 @@
   "seller_zip": "6964",
   "as24_created": "2025-12-09T21:48:39.381Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3497,7 +3634,8 @@
   "current_price": 310000.0,
   "current_mileage": 15100,
   "first_price": 310000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20067928": {
   "id": 20067928,
@@ -3514,7 +3652,7 @@
   "seller_zip": "2900",
   "as24_created": "2025-12-13T17:47:18.915Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3522,7 +3660,8 @@
   "current_price": 228500.0,
   "current_mileage": 35600,
   "first_price": 228500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20068791": {
   "id": 20068791,
@@ -3539,7 +3678,7 @@
   "seller_zip": "6340",
   "as24_created": "2025-12-14T18:43:16.949Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3547,7 +3686,8 @@
   "current_price": 569500.0,
   "current_mileage": 100,
   "first_price": 569500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20078966": {
   "id": 20078966,
@@ -3564,7 +3704,7 @@
   "seller_zip": "8902",
   "as24_created": "2025-12-18T13:09:01.262Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3572,7 +3712,8 @@
   "current_price": 439000.0,
   "current_mileage": 1540,
   "first_price": 439000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20079037": {
   "id": 20079037,
@@ -3589,7 +3730,7 @@
   "seller_zip": "8902",
   "as24_created": "2025-12-18T13:24:20.728Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3597,7 +3738,8 @@
   "current_price": 560000.0,
   "current_mileage": 870,
   "first_price": 560000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20093475": {
   "id": 20093475,
@@ -3614,7 +3756,7 @@
   "seller_zip": "8107",
   "as24_created": "2025-12-24T13:43:12.909Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3622,7 +3764,8 @@
   "current_price": 225000.0,
   "current_mileage": 34000,
   "first_price": 225000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20096234": {
   "id": 20096234,
@@ -3639,7 +3782,7 @@
   "seller_zip": "8207",
   "as24_created": "2025-12-28T10:49:11.635Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3647,7 +3790,8 @@
   "current_price": 500000.0,
   "current_mileage": 15000,
   "first_price": 500000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20096293": {
   "id": 20096293,
@@ -3664,7 +3808,7 @@
   "seller_zip": "5702",
   "as24_created": "2025-12-28T12:05:12.31Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3672,7 +3816,8 @@
   "current_price": 148000.0,
   "current_mileage": 39800,
   "first_price": 148000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20113029": {
   "id": 20113029,
@@ -3689,7 +3834,7 @@
   "seller_zip": "3900",
   "as24_created": "2026-01-08T13:24:18.137Z",
   "first_seen": "2026-07-16T18:19:15+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3697,7 +3842,8 @@
   "current_price": 134000.0,
   "current_mileage": 9421,
   "first_price": 134000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20119184": {
   "id": 20119184,
@@ -3714,7 +3860,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-01-11T16:45:56.456Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3722,7 +3868,8 @@
   "current_price": 447500.0,
   "current_mileage": 2600,
   "first_price": 447500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20120607": {
   "id": 20120607,
@@ -3739,7 +3886,7 @@
   "seller_zip": "1803",
   "as24_created": "2026-01-12T13:10:36.811Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3747,7 +3894,8 @@
   "current_price": 98500.0,
   "current_mileage": 72500,
   "first_price": 98500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20120753": {
   "id": 20120753,
@@ -3764,7 +3912,7 @@
   "seller_zip": "8807",
   "as24_created": "2026-01-12T13:41:22.047Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3772,7 +3920,8 @@
   "current_price": 374500.0,
   "current_mileage": 8700,
   "first_price": 374500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20138858": {
   "id": 20138858,
@@ -3789,7 +3938,7 @@
   "seller_zip": "6020",
   "as24_created": "2026-01-19T11:14:31.721Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3797,7 +3946,8 @@
   "current_price": 620000.0,
   "current_mileage": 8600,
   "first_price": 620000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20145382": {
   "id": 20145382,
@@ -3814,7 +3964,7 @@
   "seller_zip": "8902",
   "as24_created": "2026-01-21T10:35:29.537Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3822,7 +3972,8 @@
   "current_price": 389000.0,
   "current_mileage": 7500,
   "first_price": 389000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20157583": {
   "id": 20157583,
@@ -3839,7 +3990,7 @@
   "seller_zip": "4665",
   "as24_created": "2026-01-26T10:39:05.83Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3847,7 +3998,8 @@
   "current_price": 327900.0,
   "current_mileage": 4900,
   "first_price": 327900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20158600": {
   "id": 20158600,
@@ -3864,7 +4016,7 @@
   "seller_zip": "8154",
   "as24_created": "2026-01-26T14:58:13.434Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3872,7 +4024,8 @@
   "current_price": 154900.0,
   "current_mileage": 78000,
   "first_price": 154900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20159351": {
   "id": 20159351,
@@ -3889,7 +4042,7 @@
   "seller_zip": "6933",
   "as24_created": "2026-01-26T17:06:14.095Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3897,7 +4050,8 @@
   "current_price": 249900.0,
   "current_mileage": 66520,
   "first_price": 249900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20159686": {
   "id": 20159686,
@@ -3914,7 +4068,7 @@
   "seller_zip": "1852",
   "as24_created": "2026-01-26T19:55:36.481Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3922,7 +4076,8 @@
   "current_price": 69900.0,
   "current_mileage": 63500,
   "first_price": 69900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20165082": {
   "id": 20165082,
@@ -3939,7 +4094,7 @@
   "seller_zip": "4052",
   "as24_created": "2026-01-28T15:32:21.394Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3947,7 +4102,8 @@
   "current_price": 395000.0,
   "current_mileage": 3600,
   "first_price": 395000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20166781": {
   "id": 20166781,
@@ -3964,7 +4120,7 @@
   "seller_zip": "1950",
   "as24_created": "2026-01-29T10:30:48.546Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3972,7 +4128,8 @@
   "current_price": 335000.0,
   "current_mileage": 29500,
   "first_price": 335000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20168414": {
   "id": 20168414,
@@ -3989,7 +4146,7 @@
   "seller_zip": "8051",
   "as24_created": "2026-01-29T16:33:05.199Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -3997,7 +4154,8 @@
   "current_price": 299900.0,
   "current_mileage": 3200,
   "first_price": 299900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20175120": {
   "id": 20175120,
@@ -4014,7 +4172,7 @@
   "seller_zip": "1032",
   "as24_created": "2026-02-02T07:25:56.291Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4022,7 +4180,8 @@
   "current_price": 295000.0,
   "current_mileage": 36000,
   "first_price": 295000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20180893": {
   "id": 20180893,
@@ -4039,7 +4198,7 @@
   "seller_zip": "4852",
   "as24_created": "2026-02-03T16:36:23.857Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4047,7 +4206,8 @@
   "current_price": 349500.0,
   "current_mileage": 7500,
   "first_price": 349500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20195620": {
   "id": 20195620,
@@ -4064,7 +4224,7 @@
   "seller_zip": "8370",
   "as24_created": "2026-02-09T11:17:09.129Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4072,7 +4232,8 @@
   "current_price": 299900.0,
   "current_mileage": 35000,
   "first_price": 299900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20203523": {
   "id": 20203523,
@@ -4089,7 +4250,7 @@
   "seller_zip": "1207",
   "as24_created": "2026-02-11T16:04:18.074Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4097,7 +4258,8 @@
   "current_price": 98800.0,
   "current_mileage": 53000,
   "first_price": 98800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20209182": {
   "id": 20209182,
@@ -4114,7 +4276,7 @@
   "seller_zip": "8184",
   "as24_created": "2026-02-13T14:22:37.084Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4122,7 +4284,8 @@
   "current_price": 399999.0,
   "current_mileage": 1699,
   "first_price": 399999.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20209894": {
   "id": 20209894,
@@ -4139,7 +4302,7 @@
   "seller_zip": "1227",
   "as24_created": "2026-02-13T16:06:16.128Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4147,7 +4310,8 @@
   "current_price": 318700.0,
   "current_mileage": 12310,
   "first_price": 318700.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20209948": {
   "id": 20209948,
@@ -4164,7 +4328,7 @@
   "seller_zip": "8807",
   "as24_created": "2026-02-13T16:15:19.113Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4172,7 +4336,8 @@
   "current_price": 124500.0,
   "current_mileage": 74400,
   "first_price": 124500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20215394": {
   "id": 20215394,
@@ -4189,7 +4354,7 @@
   "seller_zip": "9063",
   "as24_created": "2026-02-16T15:04:27.475Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4197,7 +4362,8 @@
   "current_price": 128500.0,
   "current_mileage": 33800,
   "first_price": 128500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20215915": {
   "id": 20215915,
@@ -4214,7 +4380,7 @@
   "seller_zip": "8712",
   "as24_created": "2026-02-16T16:52:03.646Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4222,7 +4388,8 @@
   "current_price": 349000.0,
   "current_mileage": 21500,
   "first_price": 349000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20217291": {
   "id": 20217291,
@@ -4239,7 +4406,7 @@
   "seller_zip": "1029",
   "as24_created": "2026-02-17T10:40:57.43Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4247,7 +4414,8 @@
   "current_price": 66999.0,
   "current_mileage": 59000,
   "first_price": 66999.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20217507": {
   "id": 20217507,
@@ -4264,7 +4432,7 @@
   "seller_zip": "4123",
   "as24_created": "2026-02-17T11:26:38.438Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4272,7 +4440,8 @@
   "current_price": 92900.0,
   "current_mileage": 76000,
   "first_price": 92900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20220117": {
   "id": 20220117,
@@ -4289,7 +4458,7 @@
   "seller_zip": "4665",
   "as24_created": "2026-02-18T09:30:30.909Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4297,7 +4466,8 @@
   "current_price": 324900.0,
   "current_mileage": 12500,
   "first_price": 324900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20221651": {
   "id": 20221651,
@@ -4314,7 +4484,7 @@
   "seller_zip": "1228",
   "as24_created": "2026-02-18T15:46:12.78Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4322,7 +4492,8 @@
   "current_price": 409900.0,
   "current_mileage": 321,
   "first_price": 409900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20229784": {
   "id": 20229784,
@@ -4339,7 +4510,7 @@
   "seller_zip": "3178",
   "as24_created": "2026-02-21T13:19:01.048Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4347,7 +4518,8 @@
   "current_price": 379990.0,
   "current_mileage": 11000,
   "first_price": 379990.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20231186": {
   "id": 20231186,
@@ -4364,7 +4536,7 @@
   "seller_zip": "4914",
   "as24_created": "2026-02-22T17:29:05.439Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4372,7 +4544,8 @@
   "current_price": 103499.0,
   "current_mileage": 60150,
   "first_price": 103499.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20232176": {
   "id": 20232176,
@@ -4389,7 +4562,7 @@
   "seller_zip": "6915",
   "as24_created": "2026-02-23T10:24:42.746Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4397,7 +4570,8 @@
   "current_price": 449000.0,
   "current_mileage": 4000,
   "first_price": 449000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20233292": {
   "id": 20233292,
@@ -4414,7 +4588,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-02-23T14:56:55.355Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4422,7 +4596,8 @@
   "current_price": 449000.0,
   "current_mileage": 2500,
   "first_price": 449000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20239490": {
   "id": 20239490,
@@ -4439,7 +4614,7 @@
   "seller_zip": "8620",
   "as24_created": "2026-02-25T13:13:20.22Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4447,7 +4622,8 @@
   "current_price": 369000.0,
   "current_mileage": 13000,
   "first_price": 369000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20243598": {
   "id": 20243598,
@@ -4464,7 +4640,7 @@
   "seller_zip": "6037",
   "as24_created": "2026-02-26T16:00:52.446Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4472,7 +4648,8 @@
   "current_price": 429000.0,
   "current_mileage": 13000,
   "first_price": 429000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20246563": {
   "id": 20246563,
@@ -4489,7 +4666,7 @@
   "seller_zip": "6933",
   "as24_created": "2026-02-27T14:56:45.134Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4497,7 +4674,8 @@
   "current_price": 338900.0,
   "current_mileage": 23080,
   "first_price": 338900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20247208": {
   "id": 20247208,
@@ -4514,7 +4692,7 @@
   "seller_zip": "1163",
   "as24_created": "2026-02-27T16:50:16.273Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4522,7 +4700,8 @@
   "current_price": 89900.0,
   "current_mileage": 65000,
   "first_price": 89900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20253355": {
   "id": 20253355,
@@ -4539,7 +4718,7 @@
   "seller_zip": "8153",
   "as24_created": "2026-03-02T15:44:29.48Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4547,7 +4726,8 @@
   "current_price": 599900.0,
   "current_mileage": 16500,
   "first_price": 599900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20257253": {
   "id": 20257253,
@@ -4564,7 +4744,7 @@
   "seller_zip": "6331",
   "as24_created": "2026-03-03T16:20:12.09Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4572,7 +4752,8 @@
   "current_price": 469488.0,
   "current_mileage": 6500,
   "first_price": 469488.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20260980": {
   "id": 20260980,
@@ -4589,7 +4770,7 @@
   "seller_zip": "6999",
   "as24_created": "2026-03-04T16:22:25.63Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4597,7 +4778,8 @@
   "current_price": 126500.0,
   "current_mileage": 45000,
   "first_price": 126500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20265222": {
   "id": 20265222,
@@ -4614,7 +4796,7 @@
   "seller_zip": "1242",
   "as24_created": "2026-03-05T21:46:50.721Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4622,7 +4804,8 @@
   "current_price": 59500.0,
   "current_mileage": 68245,
   "first_price": 59500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20267660": {
   "id": 20267660,
@@ -4639,7 +4822,7 @@
   "seller_zip": "8620",
   "as24_created": "2026-03-06T15:23:03.029Z",
   "first_seen": "2026-07-20T11:12:27+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4647,7 +4830,8 @@
   "current_price": 184900.0,
   "current_mileage": 61000,
   "first_price": 184900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20277775": {
   "id": 20277775,
@@ -4664,7 +4848,7 @@
   "seller_zip": "9552",
   "as24_created": "2026-03-10T13:19:12.052Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4672,7 +4856,8 @@
   "current_price": 415000.0,
   "current_mileage": 440,
   "first_price": 415000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20286252": {
   "id": 20286252,
@@ -4689,7 +4874,7 @@
   "seller_zip": "6915",
   "as24_created": "2026-03-12T16:40:28.979Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4697,7 +4882,8 @@
   "current_price": 1290000.0,
   "current_mileage": 12000,
   "first_price": 1290000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20291929": {
   "id": 20291929,
@@ -4714,7 +4900,7 @@
   "seller_zip": "8832",
   "as24_created": "2026-03-14T13:17:55.967Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4722,7 +4908,8 @@
   "current_price": 588888.0,
   "current_mileage": 3900,
   "first_price": 588888.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20295137": {
   "id": 20295137,
@@ -4739,7 +4926,7 @@
   "seller_zip": "4052",
   "as24_created": "2026-03-16T12:54:50.341Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4747,7 +4934,8 @@
   "current_price": 328000.0,
   "current_mileage": 3900,
   "first_price": 328000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20297846": {
   "id": 20297846,
@@ -4764,7 +4952,7 @@
   "seller_zip": "1163",
   "as24_created": "2026-03-17T10:32:53.184Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4772,7 +4960,8 @@
   "current_price": 660000.0,
   "current_mileage": 100,
   "first_price": 660000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20304406": {
   "id": 20304406,
@@ -4789,7 +4978,7 @@
   "seller_zip": "8310",
   "as24_created": "2026-03-19T08:50:56.784Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4797,7 +4986,8 @@
   "current_price": 1450000.0,
   "current_mileage": 300,
   "first_price": 1450000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20305119": {
   "id": 20305119,
@@ -4814,7 +5004,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-03-19T11:42:20.458Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4822,7 +5012,8 @@
   "current_price": 727500.0,
   "current_mileage": 25500,
   "first_price": 727500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20307430": {
   "id": 20307430,
@@ -4864,7 +5055,7 @@
   "seller_zip": "1228",
   "as24_created": "2026-03-20T17:10:51.992Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4872,7 +5063,8 @@
   "current_price": 298900.0,
   "current_mileage": 15600,
   "first_price": 298900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20316586": {
   "id": 20316586,
@@ -4889,7 +5081,7 @@
   "seller_zip": "8864",
   "as24_created": "2026-03-23T17:59:47.011Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4897,7 +5089,8 @@
   "current_price": 357500.0,
   "current_mileage": 10030,
   "first_price": 357500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20325901": {
   "id": 20325901,
@@ -4914,7 +5107,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-03-26T14:28:26.69Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4922,7 +5115,8 @@
   "current_price": 520000.0,
   "current_mileage": 200,
   "first_price": 520000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20334778": {
   "id": 20334778,
@@ -4939,7 +5133,7 @@
   "seller_zip": "6964",
   "as24_created": "2026-03-30T08:49:26.695Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4947,7 +5141,8 @@
   "current_price": 449000.0,
   "current_mileage": 6564,
   "first_price": 449000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20340634": {
   "id": 20340634,
@@ -4964,7 +5159,7 @@
   "seller_zip": "8152",
   "as24_created": "2026-04-01T07:48:56.102Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4972,7 +5167,8 @@
   "current_price": 308000.0,
   "current_mileage": 8100,
   "first_price": 308000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20343018": {
   "id": 20343018,
@@ -4989,7 +5185,7 @@
   "seller_zip": "6037",
   "as24_created": "2026-04-01T17:26:19.324Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -4997,7 +5193,8 @@
   "current_price": 189900.0,
   "current_mileage": 54800,
   "first_price": 189900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20344698": {
   "id": 20344698,
@@ -5014,7 +5211,7 @@
   "seller_zip": "4052",
   "as24_created": "2026-04-02T10:51:00.109Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5022,7 +5219,8 @@
   "current_price": 200000.0,
   "current_mileage": 600,
   "first_price": 200000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20354432": {
   "id": 20354432,
@@ -5039,7 +5237,7 @@
   "seller_zip": "6915",
   "as24_created": "2026-04-07T09:48:44.888Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5047,7 +5245,8 @@
   "current_price": 440000.0,
   "current_mileage": 5500,
   "first_price": 440000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20360321": {
   "id": 20360321,
@@ -5064,7 +5263,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-04-09T07:05:02.674Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5072,7 +5271,8 @@
   "current_price": 499000.0,
   "current_mileage": 5600,
   "first_price": 499000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20360855": {
   "id": 20360855,
@@ -5089,7 +5289,7 @@
   "seller_zip": "1228",
   "as24_created": "2026-04-09T09:28:44.248Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5097,7 +5297,8 @@
   "current_price": 419900.0,
   "current_mileage": 3200,
   "first_price": 419900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20372360": {
   "id": 20372360,
@@ -5114,7 +5315,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-04-13T14:51:34.463Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5122,7 +5323,8 @@
   "current_price": 630000.0,
   "current_mileage": 21000,
   "first_price": 630000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20377174": {
   "id": 20377174,
@@ -5139,7 +5341,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-04-15T10:16:44.64Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5147,7 +5349,8 @@
   "current_price": 197000.0,
   "current_mileage": 45000,
   "first_price": 197000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20377190": {
   "id": 20377190,
@@ -5164,7 +5367,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-04-15T10:22:55.837Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5172,7 +5375,8 @@
   "current_price": 239000.0,
   "current_mileage": 42000,
   "first_price": 239000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20384189": {
   "id": 20384189,
@@ -5189,7 +5393,7 @@
   "seller_zip": "9524",
   "as24_created": "2026-04-17T15:25:03.002Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5197,7 +5401,8 @@
   "current_price": 114800.0,
   "current_mileage": 84500,
   "first_price": 114800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20389245": {
   "id": 20389245,
@@ -5214,7 +5419,7 @@
   "seller_zip": "1950",
   "as24_created": "2026-04-20T12:03:05.928Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5222,7 +5427,8 @@
   "current_price": 399900.0,
   "current_mileage": 8900,
   "first_price": 399900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20392961": {
   "id": 20392961,
@@ -5239,7 +5445,7 @@
   "seller_zip": "8404",
   "as24_created": "2026-04-21T14:02:03.19Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5247,7 +5453,8 @@
   "current_price": 232000.0,
   "current_mileage": 16000,
   "first_price": 232000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20399312": {
   "id": 20399312,
@@ -5264,7 +5471,7 @@
   "seller_zip": "6330",
   "as24_created": "2026-04-23T11:16:26.607Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5272,7 +5479,8 @@
   "current_price": 465000.0,
   "current_mileage": 3900,
   "first_price": 465000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20402846": {
   "id": 20402846,
@@ -5289,7 +5497,7 @@
   "seller_zip": "3604",
   "as24_created": "2026-04-24T09:51:01.689Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5297,7 +5505,8 @@
   "current_price": 169900.0,
   "current_mileage": 14500,
   "first_price": 169900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20406585": {
   "id": 20406585,
@@ -5314,7 +5523,7 @@
   "seller_zip": "6403",
   "as24_created": "2026-04-25T10:24:04.904Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5322,7 +5531,8 @@
   "current_price": 585000.0,
   "current_mileage": 15500,
   "first_price": 585000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20422544": {
   "id": 20422544,
@@ -5339,7 +5549,7 @@
   "seller_zip": "8280",
   "as24_created": "2026-04-30T08:51:44.982Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5347,7 +5557,8 @@
   "current_price": 99430.0,
   "current_mileage": 61260,
   "first_price": 99430.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20423911": {
   "id": 20423911,
@@ -5364,7 +5575,7 @@
   "seller_zip": "8834",
   "as24_created": "2026-04-30T13:57:51.284Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5372,7 +5583,8 @@
   "current_price": 435900.0,
   "current_mileage": 150,
   "first_price": 435900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20423985": {
   "id": 20423985,
@@ -5389,7 +5601,7 @@
   "seller_zip": "8280",
   "as24_created": "2026-04-30T14:06:30.833Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5397,7 +5609,8 @@
   "current_price": 248488.0,
   "current_mileage": 36883,
   "first_price": 248488.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20426482": {
   "id": 20426482,
@@ -5414,7 +5627,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-05-01T10:03:40.407Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5422,7 +5635,8 @@
   "current_price": 1367500.0,
   "current_mileage": 900,
   "first_price": 1367500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20426565": {
   "id": 20426565,
@@ -5439,7 +5653,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-05-01T10:33:40.724Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5447,7 +5661,8 @@
   "current_price": 446500.0,
   "current_mileage": 7900,
   "first_price": 446500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20427810": {
   "id": 20427810,
@@ -5464,7 +5679,7 @@
   "seller_zip": "1196",
   "as24_created": "2026-05-01T15:56:57.641Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5472,7 +5687,8 @@
   "current_price": 119900.0,
   "current_mileage": 45000,
   "first_price": 119900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20430092": {
   "id": 20430092,
@@ -5489,7 +5705,7 @@
   "seller_zip": "8730",
   "as24_created": "2026-05-02T07:54:37.956Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5497,7 +5713,8 @@
   "current_price": 399900.0,
   "current_mileage": 346,
   "first_price": 399900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20435767": {
   "id": 20435767,
@@ -5514,7 +5731,7 @@
   "seller_zip": "8730",
   "as24_created": "2026-05-04T13:12:30.46Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5522,7 +5739,8 @@
   "current_price": 439812.0,
   "current_mileage": 6899,
   "first_price": 439812.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20438503": {
   "id": 20438503,
@@ -5539,7 +5757,7 @@
   "seller_zip": "9525",
   "as24_created": "2026-05-05T09:02:33.634Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5547,7 +5765,8 @@
   "current_price": 229488.0,
   "current_mileage": 34000,
   "first_price": 229488.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20446713": {
   "id": 20446713,
@@ -5564,7 +5783,7 @@
   "seller_zip": "1185",
   "as24_created": "2026-05-07T10:24:38.781Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5572,7 +5791,8 @@
   "current_price": 118900.0,
   "current_mileage": 44300,
   "first_price": 118900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20450899": {
   "id": 20450899,
@@ -5589,7 +5809,7 @@
   "seller_zip": "6330",
   "as24_created": "2026-05-08T11:47:15.874Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5597,7 +5817,8 @@
   "current_price": 329000.0,
   "current_mileage": 15000,
   "first_price": 329000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20451000": {
   "id": 20451000,
@@ -5614,7 +5835,7 @@
   "seller_zip": "8212",
   "as24_created": "2026-05-08T12:04:16.297Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5622,7 +5843,8 @@
   "current_price": 294000.0,
   "current_mileage": 34000,
   "first_price": 294000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20457293": {
   "id": 20457293,
@@ -5639,7 +5861,7 @@
   "seller_zip": "6915",
   "as24_created": "2026-05-11T07:09:41.069Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5647,7 +5869,8 @@
   "current_price": 449000.0,
   "current_mileage": 13000,
   "first_price": 449000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20458736": {
   "id": 20458736,
@@ -5664,7 +5887,7 @@
   "seller_zip": "8051",
   "as24_created": "2026-05-11T13:18:22.938Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5672,7 +5895,8 @@
   "current_price": 384500.0,
   "current_mileage": 7300,
   "first_price": 384500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20469192": {
   "id": 20469192,
@@ -5689,7 +5913,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-05-14T20:37:17.648Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5697,7 +5921,8 @@
   "current_price": 127500.0,
   "current_mileage": 33800,
   "first_price": 127500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20484780": {
   "id": 20484780,
@@ -5714,7 +5939,7 @@
   "seller_zip": "8730",
   "as24_created": "2026-05-20T14:16:19.797Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5722,7 +5947,8 @@
   "current_price": 599800.0,
   "current_mileage": 25000,
   "first_price": 599800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20494470": {
   "id": 20494470,
@@ -5739,7 +5965,7 @@
   "seller_zip": "8340",
   "as24_created": "2026-05-24T09:40:26.957Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5747,7 +5973,8 @@
   "current_price": 189488.0,
   "current_mileage": 59900,
   "first_price": 189488.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20494705": {
   "id": 20494705,
@@ -5764,7 +5991,7 @@
   "seller_zip": "9063",
   "as24_created": "2026-05-24T14:28:36.643Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5772,7 +5999,8 @@
   "current_price": 595000.0,
   "current_mileage": 5890,
   "first_price": 595000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20495464": {
   "id": 20495464,
@@ -5789,7 +6017,7 @@
   "seller_zip": "1868",
   "as24_created": "2026-05-25T12:38:02.506Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5797,7 +6025,8 @@
   "current_price": 204900.0,
   "current_mileage": 32500,
   "first_price": 204900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20495985": {
   "id": 20495985,
@@ -5814,7 +6043,7 @@
   "seller_zip": "7402",
   "as24_created": "2026-05-25T20:14:12.598Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5822,7 +6051,8 @@
   "current_price": 74500.0,
   "current_mileage": 51200,
   "first_price": 74500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20496485": {
   "id": 20496485,
@@ -5839,7 +6069,7 @@
   "seller_zip": "6915",
   "as24_created": "2026-05-26T08:28:02.891Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5847,7 +6077,8 @@
   "current_price": 392900.0,
   "current_mileage": 22900,
   "first_price": 392900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20499238": {
   "id": 20499238,
@@ -5864,7 +6095,7 @@
   "seller_zip": "1185",
   "as24_created": "2026-05-27T06:48:43.564Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5872,7 +6103,8 @@
   "current_price": 114900.0,
   "current_mileage": 58000,
   "first_price": 114900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20500889": {
   "id": 20500889,
@@ -5889,7 +6121,7 @@
   "seller_zip": "6915",
   "as24_created": "2026-05-27T13:36:35.759Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5897,7 +6129,8 @@
   "current_price": 305000.0,
   "current_mileage": 9000,
   "first_price": 305000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20500912": {
   "id": 20500912,
@@ -5914,7 +6147,7 @@
   "seller_zip": "6915",
   "as24_created": "2026-05-27T13:43:10.962Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5922,7 +6155,8 @@
   "current_price": 465000.0,
   "current_mileage": 1800,
   "first_price": 465000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20501673": {
   "id": 20501673,
@@ -5939,7 +6173,7 @@
   "seller_zip": "8712",
   "as24_created": "2026-05-27T15:41:32.273Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5947,7 +6181,8 @@
   "current_price": 445000.0,
   "current_mileage": 6900,
   "first_price": 445000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20502721": {
   "id": 20502721,
@@ -5964,7 +6199,7 @@
   "seller_zip": "1950",
   "as24_created": "2026-05-28T07:51:28.102Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5972,7 +6207,8 @@
   "current_price": 234888.0,
   "current_mileage": 39900,
   "first_price": 234888.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20503087": {
   "id": 20503087,
@@ -5989,7 +6225,7 @@
   "seller_zip": "1950",
   "as24_created": "2026-05-28T09:15:57.368Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -5997,7 +6233,8 @@
   "current_price": 555555.0,
   "current_mileage": 2700,
   "first_price": 555555.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20507065": {
   "id": 20507065,
@@ -6014,7 +6251,7 @@
   "seller_zip": "9014",
   "as24_created": "2026-05-29T12:41:48.285Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6022,7 +6259,8 @@
   "current_price": 429000.0,
   "current_mileage": 15000,
   "first_price": 429000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20507477": {
   "id": 20507477,
@@ -6039,7 +6277,7 @@
   "seller_zip": "9008",
   "as24_created": "2026-05-29T14:01:05.612Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6047,7 +6285,8 @@
   "current_price": 519000.0,
   "current_mileage": 4800,
   "first_price": 519000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20507950": {
   "id": 20507950,
@@ -6064,7 +6303,7 @@
   "seller_zip": "3286",
   "as24_created": "2026-05-29T15:22:43.819Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6072,7 +6311,8 @@
   "current_price": 257999.0,
   "current_mileage": 9500,
   "first_price": 257999.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20508681": {
   "id": 20508681,
@@ -6089,7 +6329,7 @@
   "seller_zip": "8957",
   "as24_created": "2026-05-29T22:20:30.209Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6097,7 +6337,8 @@
   "current_price": 219999.0,
   "current_mileage": 26000,
   "first_price": 219999.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20510159": {
   "id": 20510159,
@@ -6114,7 +6355,7 @@
   "seller_zip": "8048",
   "as24_created": "2026-05-30T13:17:02.391Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6122,7 +6363,8 @@
   "current_price": 428000.0,
   "current_mileage": 980,
   "first_price": 428000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20510399": {
   "id": 20510399,
@@ -6139,7 +6381,7 @@
   "seller_zip": "8309",
   "as24_created": "2026-05-30T14:57:38.851Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6147,7 +6389,8 @@
   "current_price": 299890.0,
   "current_mileage": 22950,
   "first_price": 299890.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20511781": {
   "id": 20511781,
@@ -6164,7 +6407,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-05-31T17:05:44.088Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6172,7 +6415,8 @@
   "current_price": 444500.0,
   "current_mileage": 4800,
   "first_price": 444500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20516440": {
   "id": 20516440,
@@ -6189,7 +6433,7 @@
   "seller_zip": "8852",
   "as24_created": "2026-06-02T08:48:55.701Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6197,7 +6441,8 @@
   "current_price": 204000.0,
   "current_mileage": 14500,
   "first_price": 204000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20521502": {
   "id": 20521502,
@@ -6214,7 +6459,7 @@
   "seller_zip": "3125",
   "as24_created": "2026-06-03T14:48:02.091Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6222,7 +6467,8 @@
   "current_price": 87500.0,
   "current_mileage": 59500,
   "first_price": 87500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20525705": {
   "id": 20525705,
@@ -6239,7 +6485,7 @@
   "seller_zip": "6915",
   "as24_created": "2026-06-05T07:17:30.638Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6247,7 +6493,8 @@
   "current_price": 1590000.0,
   "current_mileage": 1500,
   "first_price": 1590000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20526265": {
   "id": 20526265,
@@ -6264,7 +6511,7 @@
   "seller_zip": "8712",
   "as24_created": "2026-06-05T09:43:26.646Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6272,7 +6519,8 @@
   "current_price": 439800.0,
   "current_mileage": 5200,
   "first_price": 439800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20526453": {
   "id": 20526453,
@@ -6289,7 +6537,7 @@
   "seller_zip": "8834",
   "as24_created": "2026-06-05T10:41:33.384Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6297,7 +6545,8 @@
   "current_price": 475000.0,
   "current_mileage": 4900,
   "first_price": 475000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20529565": {
   "id": 20529565,
@@ -6314,7 +6563,7 @@
   "seller_zip": "8730",
   "as24_created": "2026-06-06T10:23:53.931Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6322,7 +6571,8 @@
   "current_price": 550000.0,
   "current_mileage": 36000,
   "first_price": 550000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20532936": {
   "id": 20532936,
@@ -6339,7 +6589,7 @@
   "seller_zip": "8706",
   "as24_created": "2026-06-08T09:43:50.38Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6347,7 +6597,8 @@
   "current_price": 399000.0,
   "current_mileage": 5830,
   "first_price": 399000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20537270": {
   "id": 20537270,
@@ -6364,7 +6615,7 @@
   "seller_zip": "6915",
   "as24_created": "2026-06-09T12:48:39.342Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6372,7 +6623,8 @@
   "current_price": 350000.0,
   "current_mileage": 6500,
   "first_price": 350000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20539522": {
   "id": 20539522,
@@ -6389,7 +6641,7 @@
   "seller_zip": "8902",
   "as24_created": "2026-06-10T07:42:10.346Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6397,7 +6649,8 @@
   "current_price": 409000.0,
   "current_mileage": 5000,
   "first_price": 409000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20541336": {
   "id": 20541336,
@@ -6414,7 +6667,7 @@
   "seller_zip": "6915",
   "as24_created": "2026-06-10T14:02:44.876Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6422,7 +6675,8 @@
   "current_price": 455000.0,
   "current_mileage": 12500,
   "first_price": 455000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20544680": {
   "id": 20544680,
@@ -6439,7 +6693,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-06-11T14:02:15.884Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6447,7 +6701,8 @@
   "current_price": 339000.0,
   "current_mileage": 4500,
   "first_price": 339000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20544815": {
   "id": 20544815,
@@ -6464,7 +6719,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-06-11T14:29:14.516Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6472,7 +6727,8 @@
   "current_price": 339000.0,
   "current_mileage": 5000,
   "first_price": 339000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20544857": {
   "id": 20544857,
@@ -6489,7 +6745,7 @@
   "seller_zip": "6915",
   "as24_created": "2026-06-11T14:36:21.364Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6497,7 +6753,8 @@
   "current_price": 349000.0,
   "current_mileage": 7000,
   "first_price": 349000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20544865": {
   "id": 20544865,
@@ -6539,7 +6796,7 @@
   "seller_zip": "4552",
   "as24_created": "2026-06-11T16:16:10.684Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6547,7 +6804,8 @@
   "current_price": 118800.0,
   "current_mileage": 39223,
   "first_price": 118800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20554373": {
   "id": 20554373,
@@ -6564,7 +6822,7 @@
   "seller_zip": "3032",
   "as24_created": "2026-06-15T13:39:17.087Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6572,7 +6830,8 @@
   "current_price": 170900.0,
   "current_mileage": 75000,
   "first_price": 170900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20556566": {
   "id": 20556566,
@@ -6589,7 +6848,7 @@
   "seller_zip": "1228",
   "as24_created": "2026-06-16T08:19:35.281Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6597,7 +6856,8 @@
   "current_price": 78000.0,
   "current_mileage": 52500,
   "first_price": 78000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20556956": {
   "id": 20556956,
@@ -6614,7 +6874,7 @@
   "seller_zip": "6130",
   "as24_created": "2026-06-16T09:33:23.438Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6622,7 +6882,8 @@
   "current_price": 449000.0,
   "current_mileage": 6000,
   "first_price": 449000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20558229": {
   "id": 20558229,
@@ -6639,7 +6900,7 @@
   "seller_zip": "8310",
   "as24_created": "2026-06-16T14:21:06.581Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6647,7 +6908,8 @@
   "current_price": 420000.0,
   "current_mileage": 8400,
   "first_price": 420000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20564588": {
   "id": 20564588,
@@ -6689,7 +6951,7 @@
   "seller_zip": "6330",
   "as24_created": "2026-06-19T15:16:45.178Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6697,7 +6959,8 @@
   "current_price": 89000.0,
   "current_mileage": 78900,
   "first_price": 89000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20569427": {
   "id": 20569427,
@@ -6714,7 +6977,7 @@
   "seller_zip": "6330",
   "as24_created": "2026-06-20T09:44:47.045Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6722,7 +6985,8 @@
   "current_price": 69880.0,
   "current_mileage": 69000,
   "first_price": 69880.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20575706": {
   "id": 20575706,
@@ -6739,7 +7003,7 @@
   "seller_zip": "5703",
   "as24_created": "2026-06-23T10:32:45.993Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6747,7 +7011,8 @@
   "current_price": 79900.0,
   "current_mileage": 98000,
   "first_price": 79900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20576017": {
   "id": 20576017,
@@ -6764,7 +7029,7 @@
   "seller_zip": "8543",
   "as24_created": "2026-06-23T12:05:17.078Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6772,7 +7037,8 @@
   "current_price": 339999.0,
   "current_mileage": 17200,
   "first_price": 339999.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20578049": {
   "id": 20578049,
@@ -6789,7 +7055,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-06-24T07:08:29.358Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6797,7 +7063,8 @@
   "current_price": 329000.0,
   "current_mileage": 19850,
   "first_price": 329000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20579269": {
   "id": 20579269,
@@ -6814,7 +7081,7 @@
   "seller_zip": "3032",
   "as24_created": "2026-06-24T12:29:59.839Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6822,7 +7089,8 @@
   "current_price": 303300.0,
   "current_mileage": 29985,
   "first_price": 303300.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20579777": {
   "id": 20579777,
@@ -6839,7 +7107,7 @@
   "seller_zip": "9008",
   "as24_created": "2026-06-24T14:17:30.998Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6847,7 +7115,8 @@
   "current_price": 475000.0,
   "current_mileage": 860,
   "first_price": 475000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20580469": {
   "id": 20580469,
@@ -6864,7 +7133,7 @@
   "seller_zip": "1217",
   "as24_created": "2026-06-24T17:24:43.261Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6872,7 +7141,8 @@
   "current_price": 195900.0,
   "current_mileage": 76000,
   "first_price": 195900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20582343": {
   "id": 20582343,
@@ -6889,7 +7159,7 @@
   "seller_zip": "8810",
   "as24_created": "2026-06-25T13:13:22.005Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6897,7 +7167,8 @@
   "current_price": 101900.0,
   "current_mileage": 41700,
   "first_price": 101900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20584999": {
   "id": 20584999,
@@ -6914,7 +7185,7 @@
   "seller_zip": "8833",
   "as24_created": "2026-06-26T12:01:41.348Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6922,7 +7193,8 @@
   "current_price": 235000.0,
   "current_mileage": 70000,
   "first_price": 235000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20586138": {
   "id": 20586138,
@@ -6939,7 +7211,7 @@
   "seller_zip": "9220",
   "as24_created": "2026-06-26T16:06:43.75Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6947,7 +7219,8 @@
   "current_price": 379900.0,
   "current_mileage": 15900,
   "first_price": 379900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20587338": {
   "id": 20587338,
@@ -6964,7 +7237,7 @@
   "seller_zip": "8952",
   "as24_created": "2026-06-27T10:39:14.489Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -6972,7 +7245,8 @@
   "current_price": 249900.0,
   "current_mileage": 9400,
   "first_price": 249900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20590887": {
   "id": 20590887,
@@ -7014,7 +7288,7 @@
   "seller_zip": "9008",
   "as24_created": "2026-06-29T22:18:06.234Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7022,7 +7296,8 @@
   "current_price": 643900.0,
   "current_mileage": 2541,
   "first_price": 643900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20594530": {
   "id": 20594530,
@@ -7039,7 +7314,7 @@
   "seller_zip": "8048",
   "as24_created": "2026-06-30T16:00:54.098Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7047,7 +7322,8 @@
   "current_price": 620000.0,
   "current_mileage": 19000,
   "first_price": 620000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20594919": {
   "id": 20594919,
@@ -7089,7 +7365,7 @@
   "seller_zip": "4052",
   "as24_created": "2026-07-03T06:39:15.173Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7097,7 +7373,8 @@
   "current_price": 439000.0,
   "current_mileage": 20100,
   "first_price": 439000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20605640": {
   "id": 20605640,
@@ -7114,7 +7391,7 @@
   "seller_zip": "5070",
   "as24_created": "2026-07-03T14:30:09.557Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7122,7 +7399,8 @@
   "current_price": 389000.0,
   "current_mileage": 29300,
   "first_price": 389000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20607298": {
   "id": 20607298,
@@ -7139,7 +7417,7 @@
   "seller_zip": "4132",
   "as24_created": "2026-07-04T07:41:15.197Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7147,7 +7425,8 @@
   "current_price": 339900.0,
   "current_mileage": 14600,
   "first_price": 339900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20607650": {
   "id": 20607650,
@@ -7164,7 +7443,7 @@
   "seller_zip": "9063",
   "as24_created": "2026-07-04T09:25:30.075Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7172,7 +7451,8 @@
   "current_price": 165500.0,
   "current_mileage": 10500,
   "first_price": 165500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20607719": {
   "id": 20607719,
@@ -7189,7 +7469,7 @@
   "seller_zip": "8048",
   "as24_created": "2026-07-04T09:43:24.773Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7197,7 +7477,8 @@
   "current_price": 498000.0,
   "current_mileage": 6870,
   "first_price": 498000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20608008": {
   "id": 20608008,
@@ -7214,7 +7495,7 @@
   "seller_zip": "8604",
   "as24_created": "2026-07-04T11:03:52.009Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7222,7 +7503,8 @@
   "current_price": 198980.0,
   "current_mileage": 26000,
   "first_price": 198980.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20608483": {
   "id": 20608483,
@@ -7239,7 +7521,7 @@
   "seller_zip": "9524",
   "as24_created": "2026-07-04T13:35:48.134Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7247,7 +7529,8 @@
   "current_price": 429800.0,
   "current_mileage": 12500,
   "first_price": 429800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20608870": {
   "id": 20608870,
@@ -7264,7 +7547,7 @@
   "seller_zip": "8143",
   "as24_created": "2026-07-04T18:06:07.883Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7272,7 +7555,8 @@
   "current_price": 339000.0,
   "current_mileage": 30000,
   "first_price": 339000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20610008": {
   "id": 20610008,
@@ -7289,7 +7573,7 @@
   "seller_zip": "6340",
   "as24_created": "2026-07-05T21:52:57.758Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7297,7 +7581,8 @@
   "current_price": 434500.0,
   "current_mileage": 5400,
   "first_price": 434500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20612205": {
   "id": 20612205,
@@ -7314,7 +7599,7 @@
   "seller_zip": "1470",
   "as24_created": "2026-07-06T15:03:51.901Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7322,7 +7607,8 @@
   "current_price": 350000.0,
   "current_mileage": 5943,
   "first_price": 350000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20612410": {
   "id": 20612410,
@@ -7339,7 +7625,7 @@
   "seller_zip": "8143",
   "as24_created": "2026-07-06T15:49:31.201Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7347,7 +7633,8 @@
   "current_price": 179900.0,
   "current_mileage": 32900,
   "first_price": 179900.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20612571": {
   "id": 20612571,
@@ -7364,7 +7651,7 @@
   "seller_zip": "8730",
   "as24_created": "2026-07-06T16:31:51.602Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7372,7 +7659,8 @@
   "current_price": 439800.0,
   "current_mileage": 6000,
   "first_price": 439800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20615423": {
   "id": 20615423,
@@ -7389,7 +7677,7 @@
   "seller_zip": "6915",
   "as24_created": "2026-07-07T14:34:49.535Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7397,7 +7685,8 @@
   "current_price": 186000.0,
   "current_mileage": 46500,
   "first_price": 186000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20615485": {
   "id": 20615485,
@@ -7414,7 +7703,7 @@
   "seller_zip": "6915",
   "as24_created": "2026-07-07T14:41:53.803Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7422,7 +7711,8 @@
   "current_price": 329000.0,
   "current_mileage": 10000,
   "first_price": 329000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20617102": {
   "id": 20617102,
@@ -7439,7 +7729,7 @@
   "seller_zip": "1228",
   "as24_created": "2026-07-08T08:06:38.896Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7447,7 +7737,8 @@
   "current_price": 397500.0,
   "current_mileage": 14300,
   "first_price": 397500.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20617184": {
   "id": 20617184,
@@ -7464,7 +7755,7 @@
   "seller_zip": "8730",
   "as24_created": "2026-07-08T08:23:28.917Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7472,7 +7763,8 @@
   "current_price": 649800.0,
   "current_mileage": 15200,
   "first_price": 649800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20625925": {
   "id": 20625925,
@@ -7489,7 +7781,7 @@
   "seller_zip": "8580",
   "as24_created": "2026-07-11T08:01:18.437Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7497,7 +7789,8 @@
   "current_price": 339800.0,
   "current_mileage": 2500,
   "first_price": 339800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20626190": {
   "id": 20626190,
@@ -7514,7 +7807,7 @@
   "seller_zip": "9524",
   "as24_created": "2026-07-11T09:05:30.539Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7522,7 +7815,8 @@
   "current_price": 1348000.0,
   "current_mileage": 4900,
   "first_price": 1348000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20626315": {
   "id": 20626315,
@@ -7539,7 +7833,7 @@
   "seller_zip": "8048",
   "as24_created": "2026-07-11T09:35:15.443Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7547,7 +7841,8 @@
   "current_price": 1680000.0,
   "current_mileage": 100,
   "first_price": 1680000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20627304": {
   "id": 20627304,
@@ -7564,7 +7859,7 @@
   "seller_zip": "9524",
   "as24_created": "2026-07-11T15:06:36.264Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7572,7 +7867,8 @@
   "current_price": 249800.0,
   "current_mileage": 49800,
   "first_price": 249800.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20627636": {
   "id": 20627636,
@@ -7589,7 +7885,7 @@
   "seller_zip": "4625",
   "as24_created": "2026-07-11T21:11:32.139Z",
   "first_seen": "2026-07-16T10:56:24+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7597,7 +7893,8 @@
   "current_price": 449000.0,
   "current_mileage": 2800,
   "first_price": 449000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  },
  "20634714": {
   "id": 20634714,
@@ -7639,7 +7936,7 @@
   "seller_zip": "6915",
   "as24_created": "2026-07-16T07:01:16.082Z",
   "first_seen": "2026-07-16T17:30:21+00:00",
-  "last_seen": "2026-07-20T19:48:12+00:00",
+  "last_seen": "2026-07-20T20:09:56+00:00",
   "status": "active",
   "delisted_at": null,
   "misses": 0,
@@ -7647,6 +7944,7 @@
   "current_price": 424000.0,
   "current_mileage": 13000,
   "first_price": 424000.0,
-  "notified": true
+  "notified": true,
+  "sold_notified": false
  }
 }
