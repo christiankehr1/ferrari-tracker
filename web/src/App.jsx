@@ -9,24 +9,14 @@ import {
   CartesianGrid,
 } from "recharts";
 import { T } from "./theme.js";
+import { MODELS, COLOR } from "./models.js";
 import ModelsPage from "./ModelsPage.jsx";
+import MapPage from "./MapPage.jsx";
 import BiWordmark from "./BiWordmark.jsx";
 
 // Data is published next to the site by the GitHub Action.
 // Cache-bust so a fresh crawl shows up without a hard refresh.
 const DATA_URL = "./data/dashboard.json";
-
-// Fixed order — a series keeps its colour no matter which filter is on, and the
-// hues are checked for colourblind separation as a sequence, so don't reshuffle
-// them. Green is reserved for price drops and never used for a model.
-const MODELS = [
-  { key: "f430", label: "F430", color: T.giallo },
-  { key: "sf90", label: "SF90", color: T.rosso },
-  { key: "812", label: "812", color: T.blu },
-  { key: "488", label: "488", color: T.rosa },
-  { key: "f360", label: "F360", color: T.acqua },
-];
-const COLOR = Object.fromEntries(MODELS.map((m) => [m.key, m.color]));
 
 // B.I. Collection, the official Ferrari dealer in Zürich. Matched on the seller
 // id the API returns, not the name — dealers rename themselves ("… 50 Jahre"),
@@ -151,12 +141,16 @@ function useNarrow() {
 
 const NAV = [
   { id: "dashboard", href: "#/", label: "DASHBOARD" },
+  { id: "map", href: "#/map", label: "HEATMAP" },
   { id: "models", href: "#/models", label: "MODEL DIRECTORY" },
 ];
 
 // Hash routing, not a router: GitHub Pages serves one static index.html, so a
-// real path would 404 on refresh. The hash keeps both pages linkable.
-const viewFromHash = () => (window.location.hash.replace(/^#\/?/, "") === "models" ? "models" : "dashboard");
+// real path would 404 on refresh. The hash keeps every page linkable.
+const viewFromHash = () => {
+  const h = window.location.hash.replace(/^#\/?/, "");
+  return h === "models" || h === "map" ? h : "dashboard";
+};
 
 function Shell({ data, view, children }) {
   return (
@@ -368,6 +362,13 @@ export default function App() {
     return (
       <Shell data={data} view={view}>
         <ModelsPage />
+      </Shell>
+    );
+
+  if (view === "map")
+    return (
+      <Shell data={data} view={view}>
+        <MapPage data={data} error={error} />
       </Shell>
     );
 
