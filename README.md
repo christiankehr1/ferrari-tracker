@@ -97,6 +97,14 @@ Consequences worth knowing:
 - **Unset secrets are a no-op**, not an error. The crawl publishes exactly as before.
 - **Relists ping.** A dealer deleting and re-posting a car creates a new listing ID, which reads as new. That's the same fingerprinting gap called out at the bottom of this file — alerts inherit it.
 
+### Weekly sold digest
+
+A second, quieter mail: every car that **left the market** in the past week, in one Monday-morning email. A disappearance is all the API gives us — we can't tell a sale from a listing simply being pulled — so the wording stays "sold or delisted".
+
+`crawler/notify.py --weekly` reads the committed `listings.json`, mails the delistings it hasn't reported yet, and writes `sold_notified: true` onto each — the exact same delivery-log contract as new-listing alerts, one flag over. It runs on its own weekly workflow (`.github/workflows/weekly-digest.yml`, `cron: 0 7 * * 1`), reusing the same `SMTP_*` / `NOTIFY_TO` secrets. Same consequences apply: first run adopts the existing delisted backlog silently, a failed send doesn't mark, unset secrets are a no-op.
+
+The dashboard's DELISTED filter now also shows the delisting timestamp — expand any car that has left the market and its detail line carries "left the market YYYY-MM-DD HH:MM UTC", stamped when the crawl confirmed it gone.
+
 ## Tuning
 
 **Frequency** — `.github/workflows/update.yml`, the `cron` line. Hourly is the ceiling worth running; asking prices move on a scale of weeks. Every 3h (`17 */3 * * *`) captures essentially the same signal at a quarter of the traffic. GitHub's scheduler is best-effort and skips or delays runs under load — fine here, irrelevant for prices, worth knowing.

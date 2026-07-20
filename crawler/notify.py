@@ -24,9 +24,11 @@ the delivery log. No state of our own, same as the rest of this project.
 
 import json
 import os
+import re
 import smtplib
 import ssl
 import sys
+from datetime import datetime
 from email.message import EmailMessage
 from email.utils import formatdate
 from pathlib import Path
@@ -155,6 +157,139 @@ def send(subject, text, html):
             s.send_message(msg)
 
 
+def _parse_dt(s):
+    """Lenient ISO parse for AutoScout's variable fractional-second precision.
+    Mirrors crawl.py's parser so days-on-market lines up with the dashboard."""
+    s = s.replace("Z", "+00:00")
+    s = re.sub(r"\.(\d+)", lambda m: "." + m.group(1)[:6].ljust(6, "0"), s, count=1)
+    return datetime.fromisoformat(s)
+
+
+def days_listed(l):
+    """Days from first listing to delisting, same basis as the dashboard's
+    days_on_market (prefer AutoScout's own createdDate). None if undatable."""
+    try:
+        start = _parse_dt(l.get("as24_created") or l["first_seen"])
+        end = _parse_dt(l["delisted_at"])
+        return max(0, int((end - start).total_seconds() // 86400))
+    except (KeyError, TypeError, ValueError):
+        return None
+
+
+def render_weekly(cars):
+    """Digest of cars that left the market since the last weekly run.
+
+    We can't tell a sale from a listing simply being pulled — a disappearance
+    is all the API gives us — so the wording stays 'left the market', never
+    'sold'."""
+    n = len(cars)
+    subject = (
+        f"1 Ferrari left the market: {title(cars[0])}"
+        if n == 1
+        else f"{n} Ferraris left the market this week"
+    )
+
+    lines, rows = [], []
+    for l in cars:
+        where = " · ".join(
+            x for x in [l.get("seller_city"), l.get("seller_name")] if x
+        )
+        d = days_listed(l)
+        meta = " · ".join(
+            x for x in [
+                f"last ask {money(l.get('current_price'))}",
+                km(l.get("current_mileage")),
+                f"{d}d on market" if d is not None else None,
+                f"delisted {(l.get('delisted_at') or '')[:10]}",
+            ] if x
+        )
+        lines.append(f"{title(l)}\n  {meta}\n  {where}\n  {l['url']}\n")
+        rows.append(
+            f'<tr>'
+            f'<td style="padding:12px 0;border-bottom:1px solid #eee">'
+            f'<a href="{l["url"]}" style="color:#c00;font-weight:600;'
+            f'text-decoration:none;font-size:15px">{title(l)}</a><br>'
+            f'<span style="font-size:13px;color:#888">{meta}</span><br>'
+            f'<span style="color:#888;font-size:13px">{where}</span>'
+            f"</td></tr>"
+        )
+
+    intro = (
+        "A tracked Ferrari left AutoScout in the past week — sold or "
+        "delisted, the listing is gone:"
+        if n == 1
+        else f"{n} tracked Ferraris left AutoScout in the past week "
+        "(sold or delisted):"
+    )
+    text = intro + "\n\n" + "\n".join(lines)
+    html = (
+        '<div style="font-family:-apple-system,Segoe UI,sans-serif;max-width:600px">'
+        f'<h2 style="font-size:16px;font-weight:600">{subject}</h2>'
+        f'<p style="font-size:13px;color:#555">{intro}</p>'
+        f'<table style="width:100%;border-collapse:collapse">{"".join(rows)}</table>'
+    )
+    if SITE:
+        text += f"\nDashboard: {SITE}\n"
+        html += (
+            f'<p style="font-size:13px"><a href="{SITE}" style="color:#888">'
+            "Open the dashboard</a></p>"
+        )
+    html += "</div>"
+    return subject, text, html
+
+
+def weekly_digest():
+    """Weekly recap of every car that has been delisted since the last digest.
+
+    Mirrors main()'s new-listing contract exactly, one level down: `sold_notified`
+    is the delivery log, cold start adopts the existing delisted backlog silently,
+    and a failed send never marks. Meant to run on a weekly cron, so 'since the
+    last digest' is 'the past seven days' in practice."""
+    if not LISTINGS_F.exists():
+        print("notify --weekly: no listings.json — nothing to do.")
+        return
+
+    listings = json.loads(LISTINGS_F.read_text())
+    delisted = [l for l in listings.values() if l.get("status") == "delisted"]
+    gone = [l for l in delisted if not l.get("sold_notified")]
+
+    # Cold start: a listings.json where no delisted car carries the flag is a
+    # backlog, not this week's news. Adopt it silently so switching the digest
+    # on doesn't mail every car that ever left the market.
+    if delisted and not any(l.get("sold_notified") for l in delisted):
+        for l in delisted:
+            l["sold_notified"] = True
+        write(listings)
+        print(f"notify --weekly: first run — adopted {len(delisted)} past "
+              "delisting(s), sent nothing.")
+        return
+
+    if not gone:
+        print("notify --weekly: nothing left the market since the last digest.")
+        return
+
+    if not os.environ.get("SMTP_HOST"):
+        print(f"notify --weekly: {len(gone)} delisted, but SMTP_HOST unset — "
+              "digest off, not marking.")
+        return
+
+    gone.sort(key=lambda l: l.get("delisted_at") or "", reverse=True)
+    subject, text, html = render_weekly(gone)
+
+    try:
+        send(subject, text, html)
+    except Exception as e:
+        print(f"notify --weekly: send failed ({e.__class__.__name__}: {e}) — "
+              "will retry next run.")
+        return
+
+    for l in gone:
+        listings[str(l["id"])]["sold_notified"] = True
+    write(listings)
+    print(f"notify --weekly: emailed {len(gone)} delisting(s) to {os.environ['NOTIFY_TO']}.")
+    return 0
+
+
 def test_send():
     """Send one real email on demand, to prove the SMTP path end to end.
 
@@ -192,6 +327,9 @@ def test_send():
 def main():
     if "--test" in sys.argv:
         return test_send()
+
+    if "--weekly" in sys.argv:
+        return weekly_digest()
 
     if not LISTINGS_F.exists():
         print("notify: no listings.json — nothing to do.")

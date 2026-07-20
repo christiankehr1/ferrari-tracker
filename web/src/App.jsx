@@ -47,6 +47,9 @@ const BiBadge = () => (
 const chf = (n) => (n == null ? "—" : "CHF " + n.toLocaleString("de-CH"));
 const kchf = (n) => (n == null ? "—" : (n / 1000).toFixed(0) + "k");
 const day = (ts) => ts.slice(0, 10);
+// Delisting is detected at crawl time (hourly), so the minute is meaningful —
+// show it, unlike the listing date which is only ever a calendar day.
+const stamp = (ts) => ts.slice(0, 16).replace("T", " ") + " UTC";
 
 // The four KPI tiles double as the table's filter — clicking one shows only the
 // cars it counts. Three are subsets of what's on the market, "delisted" is the
@@ -683,6 +686,11 @@ export default function App() {
                   <span>
                     #{l.id} · {l.hp ? l.hp + " PS · " : ""}
                     {l.transmission ?? "—"} · listed {day(l.as24_created ?? l.first_seen)}
+                    {l.status === "delisted" && l.delisted_at && (
+                      <span style={{ color: T.rosso }}>
+                        {" · "}left the market {stamp(l.delisted_at)}
+                      </span>
+                    )}
                   </span>
                   <a
                     href={l.url}
