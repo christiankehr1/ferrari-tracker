@@ -180,6 +180,10 @@ def main():
                 # crawl, and dropping the flag would re-alert the whole fleet every
                 # hour. notify.py sets it; we only have to not lose it.
                 "notified": (prev or {}).get("notified", False),
+                # Same contract as `notified`, for the weekly sold digest: once a
+                # car is delisted and reported, this stays true so it's never
+                # counted in two weeks' emails. notify.py --weekly owns it.
+                "sold_notified": (prev or {}).get("sold_notified", False),
             }
 
             # Append a snapshot only when something actually moved.
@@ -251,7 +255,7 @@ def main():
         "stats": stats,
         "listings": [
             {
-                **{k: v for k, v in l.items() if k not in ("misses", "notified")},
+                **{k: v for k, v in l.items() if k not in ("misses", "notified", "sold_notified")},
                 "days_on_market": days_on_market(l),
                 "history": sorted(hist.get(l["id"], []), key=lambda x: x["ts"]),
             }

@@ -1,0 +1,66 @@
+name: Weekly sold digest
+
+on:
+  # Monday 07:00 UTC — a start-of-week recap of everything that left the market
+  # in the previous seven days. Off the hourly crawl's :17 slot on purpose.
+  schedule:
+    - cron: "0 7 * * 1"
+  workflow_dispatch: # manual "Run workflow" button
+
+# Share the crawl's write lock: this job commits listings.json too (the
+# sold_notified flags), and two writers racing on data/ is exactly what the
+# hourly workflow's concurrency group already guards against.
+concurrency:
+  group: crawl-and-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write # commit the sold_notified flags in data/
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      # Reads the committed listings.json (kept fresh by the hourly crawl),
+      # emails the week's delistings, and marks them sold_notified. No secrets
+      # set = no-op, same side-car contract as the new-listing alerts.
+      - name: Email the week's delistings
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          NOTIFY_TO: ${{ secrets.NOTIFY_TO }}
+          NOTIFY_FROM: ${{ secrets.NOTIFY_FROM }}
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: python crawler/notify.py --weekly
+
+      - name: Commit flags
+        run: |
+          git config user.name "ferrari-tracker"
+          git config user.email "actions@github.com"
+          git add data/
+          # No delistings this week is the normal case — don't fail.
+          if git diff --staged --quiet; then
+            echo "No flag changes."
+            exit 0
+          fi
+          git commit -m "data: weekly sold digest $(date -u +'%Y-%m-%d')"
+          # An hourly crawl can land between our checkout and push; replay onto
+          # origin/main and let the later commit win, same as the crawl job.
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt) — rebasing onto origin/main."
+            git fetch origin main
+            git rebase -X theirs origin/main || git rebase --abort || true
+          done
+          echo "Still couldn't push after 3 attempts."
+          exit 1
