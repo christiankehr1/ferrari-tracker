@@ -58,6 +58,23 @@ const chf = (n) => (n == null ? "—" : "CHF " + n.toLocaleString("de-CH"));
 const kchf = (n) => (n == null ? "—" : (n / 1000).toFixed(0) + "k");
 const day = (ts) => ts.slice(0, 10);
 
+// The four KPI tiles double as the table's filter — clicking one shows only the
+// cars it counts. Three are subsets of what's on the market, "delisted" is the
+// cars that have left, so the selections are mutually exclusive. One predicate
+// drives both the visible rows and the per-model tab counts.
+const matchesFilter = (l, filter) => {
+  switch (filter) {
+    case "fresh":
+      return l.status === "active" && l.days_on_market <= 7;
+    case "cuts":
+      return l.status === "active" && l.current_price < l.first_price;
+    case "delisted":
+      return l.status === "delisted";
+    default: // "active" — everything on the market
+      return l.status === "active";
+  }
+};
+
 function Delta({ from, to }) {
   if (from == null || to == null || to === from)
     return <span style={{ color: T.faint, fontFamily: T.mono, fontSize: 12 }}>—</span>;
@@ -230,7 +247,7 @@ export default function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [model, setModel] = useState("all");
-  const [status, setStatus] = useState("active");
+  const [filter, setFilter] = useState("active");
   const [open, setOpen] = useState(null);
   const [view, setView] = useState(viewFromHash);
   const narrow = useNarrow();
@@ -264,21 +281,21 @@ export default function App() {
   const rows = useMemo(
     () =>
       listings
-        .filter((l) => (model === "all" || l.model_key === model) && l.status === status)
+        .filter((l) => (model === "all" || l.model_key === model) && matchesFilter(l, filter))
         .sort((a, b) => (a.current_price ?? 1e12) - (b.current_price ?? 1e12)),
-    [listings, model, status]
+    [listings, model, filter]
   );
 
-  // Counts follow the status filter, so the tabs describe what clicking them shows.
+  // Counts follow the active tile, so the tabs describe what clicking them shows.
   const counts = useMemo(() => {
-    const inStatus = listings.filter((l) => l.status === status);
+    const inScope = listings.filter((l) => matchesFilter(l, filter));
     return {
-      all: inStatus.length,
+      all: inScope.length,
       ...Object.fromEntries(
-        MODELS.map((m) => [m.key, inStatus.filter((l) => l.model_key === m.key).length])
+        MODELS.map((m) => [m.key, inScope.filter((l) => l.model_key === m.key).length])
       ),
     };
-  }, [listings, status]);
+  }, [listings, filter]);
 
   // The whole dashboard reads as one selection: picking a model narrows the KPIs
   // and the chart, not just the table below them.
@@ -300,14 +317,16 @@ export default function App() {
     };
     return [
       {
+        filter: "active",
         label: "ON MARKET",
         value: active.length,
         // Per-model counts live on the filter tabs — five of them don't fit here.
         sub: selected ? `${selected.label} only` : `across ${MODELS.length} models`,
       },
-      { label: "LISTED < 7D", value: fresh.length, sub: "new to the market", color: T.giallo },
-      { label: "PRICE CUTS", value: cuts.length, sub: "since tracking began", color: T.drop },
+      { filter: "fresh", label: "LISTED < 7D", value: fresh.length, sub: "new to the market", color: T.giallo },
+      { filter: "cuts", label: "PRICE CUTS", value: cuts.length, sub: "since tracking began", color: T.drop },
       {
+        filter: "delisted",
         label: "DELISTED",
         value: sold.length,
         sub: sold.length ? `median ${med(sold.map((l) => l.days_on_market))}d listed` : "none yet",
@@ -392,27 +411,51 @@ export default function App() {
           borderBottom: `1px solid ${T.line}`,
         }}
       >
-        {kpis.map((k) => (
-          <div key={k.label} style={{ background: T.panel, padding: "16px 24px" }}>
-            <div
-              style={{ fontFamily: T.mono, fontSize: 10, color: T.dim, letterSpacing: "0.14em" }}
-            >
-              {k.label}
-            </div>
-            <div
+        {kpis.map((k) => {
+          const on = filter === k.filter;
+          const accent = k.color ?? T.text;
+          return (
+            <button
+              key={k.label}
+              onClick={() => setFilter(k.filter)}
+              aria-pressed={on}
               style={{
-                fontFamily: T.mono,
-                fontSize: 30,
-                fontWeight: 600,
-                color: k.color ?? T.text,
-                lineHeight: 1.3,
+                background: on ? T.panelUp : T.panel,
+                // A colour cap on the selected tile so the active view is legible
+                // even when its number is the muted white of ON MARKET.
+                borderTop: `2px solid ${on ? accent : "transparent"}`,
+                textAlign: "left",
+                padding: "16px 24px",
+                cursor: "pointer",
+                font: "inherit",
+                color: "inherit",
               }}
             >
-              {k.value}
-            </div>
-            <div style={{ fontSize: 11, color: T.faint }}>{k.sub}</div>
-          </div>
-        ))}
+              <div
+                style={{
+                  fontFamily: T.mono,
+                  fontSize: 10,
+                  color: on ? T.text : T.dim,
+                  letterSpacing: "0.14em",
+                }}
+              >
+                {k.label}
+              </div>
+              <div
+                style={{
+                  fontFamily: T.mono,
+                  fontSize: 30,
+                  fontWeight: 600,
+                  color: k.color ?? T.text,
+                  lineHeight: 1.3,
+                }}
+              >
+                {k.value}
+              </div>
+              <div style={{ fontSize: 11, color: T.faint }}>{k.sub}</div>
+            </button>
+          );
+        })}
       </div>
 
       {/* Aggregate chart */}
@@ -498,7 +541,7 @@ export default function App() {
                   {series.map((m) => (
                     <Line
                       key={m.key}
-                      type="stepAfter"
+                      type="monotone"
                       dataKey={m.key}
                       stroke={m.color}
                       dot={false}
@@ -540,13 +583,6 @@ export default function App() {
             <span style={{ color: T.faint }}>{counts[m.key]}</span>
           </Tab>
         ))}
-        <div style={{ width: 1, background: T.line, margin: "4px 8px" }} />
-        <Tab val="active" cur={status} set={setStatus}>
-          ON MARKET
-        </Tab>
-        <Tab val="delisted" cur={status} set={setStatus}>
-          DELISTED
-        </Tab>
       </div>
 
       {/* Timing tower */}
@@ -685,7 +721,7 @@ export default function App() {
                           formatter={(v) => [chf(v), "ask"]}
                         />
                         <Line
-                          type="stepAfter"
+                          type="monotone"
                           dataKey="price"
                           stroke={l.current_price < l.first_price ? T.drop : T.dim}
                           dot={false}
@@ -710,7 +746,7 @@ export default function App() {
               fontSize: 12,
             }}
           >
-            {status === "delisted"
+            {filter === "delisted"
               ? "No cars have left the market yet. Delistings appear once a tracked car disappears from two crawls in a row."
               : "No cars match this filter."}
           </div>
