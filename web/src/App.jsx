@@ -118,6 +118,37 @@ function buildStats(listings) {
   });
 }
 
+const median = (a) => {
+  if (!a.length) return null;
+  const s = [...a].sort((x, y) => x - y);
+  const mid = Math.floor(s.length / 2);
+  return s.length % 2 ? s[mid] : Math.round((s[mid - 1] + s[mid]) / 2);
+};
+
+/**
+ * Time-on-market aggregates over the delisted archive — the payoff of keeping
+ * departed cars forever. Median days from listing (AutoScout's own creation
+ * date, carried on days_on_market) to the crawl that confirmed them gone, per
+ * model. Thin now, but every car that leaves the market lands here for good, so
+ * the medians only sharpen over months and years.
+ */
+function exitStats(listings) {
+  const gone = listings.filter((l) => l.status === "delisted");
+  const byModel = MODELS.map((m) => {
+    const days = gone.filter((l) => l.model_key === m.key).map((l) => l.days_on_market);
+    return {
+      key: m.key,
+      label: m.label,
+      color: m.color,
+      exits: days.length,
+      median: median(days),
+      min: days.length ? Math.min(...days) : null,
+      max: days.length ? Math.max(...days) : null,
+    };
+  }).filter((r) => r.exits > 0);
+  return { total: gone.length, median: median(gone.map((l) => l.days_on_market)), byModel };
+}
+
 // The timing tower's columns are fixed px — they add up to more than a phone is
 // wide, which let the whole page slide sideways. Below this width the row drops
 // POS (the order is already the ranking) and tightens the numeric columns.
@@ -307,11 +338,6 @@ export default function App() {
     const cuts = active.filter((l) => l.current_price < l.first_price);
     const sold = scope.filter((l) => l.status === "delisted");
     const fresh = active.filter((l) => l.days_on_market <= 7);
-    const med = (a) => {
-      if (!a.length) return 0;
-      const s = [...a].sort((x, y) => x - y);
-      return s[Math.floor(s.length / 2)];
-    };
     return [
       {
         filter: "active",
@@ -326,11 +352,18 @@ export default function App() {
         filter: "delisted",
         label: "DELISTED",
         value: sold.length,
-        sub: sold.length ? `median ${med(sold.map((l) => l.days_on_market))}d listed` : "none yet",
+        sub: sold.length ? `median ${median(sold.map((l) => l.days_on_market))}d listed` : "none yet",
         color: T.rosso,
       },
     ];
   }, [listings, selected]);
+
+  // Scoped to the selected model like the KPIs, so the archive panel reads as
+  // part of the same selection as everything above it.
+  const exits = useMemo(
+    () => exitStats(selected ? listings.filter((l) => l.model_key === selected.key) : listings),
+    [listings, selected]
+  );
 
   const series = useMemo(() => (selected ? [selected] : MODELS), [selected]);
 
@@ -588,6 +621,113 @@ export default function App() {
           </Tab>
         ))}
       </div>
+
+      {/* Time-on-market archive — only in the delisted view, where it's the point */}
+      {filter === "delisted" && exits.total > 0 && (
+        <section style={{ padding: narrow ? "0 12px 12px" : "0 24px 12px" }}>
+          <div
+            style={{
+              background: T.panel,
+              border: `1px solid ${T.line}`,
+              borderRadius: 4,
+              padding: narrow ? "14px 14px" : "16px 20px",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "baseline",
+                flexWrap: "wrap",
+                gap: 8,
+                marginBottom: 14,
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: T.mono,
+                  fontSize: 11,
+                  color: T.dim,
+                  letterSpacing: "0.14em",
+                }}
+              >
+                TIME ON MARKET · DELISTED ARCHIVE
+              </span>
+              <span style={{ fontFamily: T.mono, fontSize: 11, color: T.faint }}>
+                {exits.total} exit{exits.total === 1 ? "" : "s"} tracked · median{" "}
+                <span style={{ color: T.rosso, fontWeight: 600 }}>{exits.median}d</span> listed
+              </span>
+            </div>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "minmax(0,1fr) 56px 72px 88px",
+                gap: 6,
+                fontFamily: T.mono,
+                fontSize: 10,
+                color: T.faint,
+                letterSpacing: "0.1em",
+                padding: "0 2px 6px",
+              }}
+            >
+              <span>MODEL</span>
+              <span style={{ textAlign: "right" }}>EXITS</span>
+              <span style={{ textAlign: "right" }}>MEDIAN</span>
+              <span style={{ textAlign: "right" }}>RANGE</span>
+            </div>
+            {exits.byModel.map((r) => (
+              <div
+                key={r.key}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "minmax(0,1fr) 56px 72px 88px",
+                  gap: 6,
+                  alignItems: "center",
+                  padding: "7px 2px",
+                  borderTop: `1px solid ${T.bg}`,
+                }}
+              >
+                <span style={{ fontSize: 12, fontWeight: 500 }}>
+                  <span style={{ color: r.color, marginRight: 8 }}>■</span>
+                  {r.label}
+                </span>
+                <span
+                  style={{ fontFamily: T.mono, fontSize: 12, color: T.dim, textAlign: "right" }}
+                >
+                  {r.exits}
+                </span>
+                <span
+                  style={{
+                    fontFamily: T.mono,
+                    fontSize: 13,
+                    fontWeight: 600,
+                    textAlign: "right",
+                  }}
+                >
+                  {r.median}d
+                </span>
+                <span
+                  style={{ fontFamily: T.mono, fontSize: 11, color: T.faint, textAlign: "right" }}
+                >
+                  {r.min === r.max ? `${r.min}d` : `${r.min}–${r.max}d`}
+                </span>
+              </div>
+            ))}
+            <div
+              style={{
+                fontFamily: T.mono,
+                fontSize: 10,
+                color: T.faint,
+                marginTop: 12,
+                lineHeight: 1.6,
+              }}
+            >
+              Days from the listing's AutoScout creation date to the crawl that confirmed it gone.
+              A disappearance is all the API gives us, so this counts sold and pulled listings alike.
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Timing tower */}
       <section style={{ padding: narrow ? "0 12px" : "0 24px" }}>

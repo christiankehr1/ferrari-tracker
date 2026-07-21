@@ -105,6 +105,8 @@ A second, quieter mail: every car that **left the market** in the past week, in 
 
 The dashboard's DELISTED filter now also shows the delisting timestamp — expand any car that has left the market and its detail line carries "left the market YYYY-MM-DD HH:MM UTC", stamped when the crawl confirmed it gone.
 
+Delisted cars are never dropped — `listings.json` keeps every car it has ever seen, flipping `status` to `delisted` rather than deleting the record, so the archive grows for as long as the tracker runs. On top of that, the DELISTED view carries a **TIME ON MARKET** panel: per-model median days from a listing's AutoScout creation date to the crawl that confirmed it gone, plus each model's exit count and range. It's thin at first and sharpens with every departure — the long-run payoff of caching the cars that go offline. (The per-car price sparkline still only reaches back `HISTORY_DAYS`, currently 90; the full price series lives forever in `snapshots.csv`, it's just not all shipped to the frontend.)
+
 ## Tuning
 
 **Frequency** — `.github/workflows/update.yml`, the `cron` line. Hourly is the ceiling worth running; asking prices move on a scale of weeks. Every 3h (`17 */3 * * *`) captures essentially the same signal at a quarter of the traffic. GitHub's scheduler is best-effort and skips or delays runs under load — fine here, irrelevant for prices, worth knowing.
