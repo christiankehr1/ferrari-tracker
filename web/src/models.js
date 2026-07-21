@@ -11,6 +11,8 @@ export const MODELS = [
   { key: "812", label: "812", color: T.blu },
   { key: "488", label: "488", color: T.rosa },
   { key: "f360", label: "F360", color: T.acqua },
+  { key: "296", label: "296", color: T.viola },
+  { key: "roma", label: "Roma", color: T.arancio },
 ];
 
 export const COLOR = Object.fromEntries(MODELS.map((m) => [m.key, m.color]));

@@ -18,7 +18,7 @@ export const SWEEP_SEEN = 1004;
 export const SWEEP_TOTAL = 1006;
 
 // Keys the hourly crawler actually tracks — kept in sync with crawler/crawl.py MODELS.
-export const TRACKED = ["f430", "sf90", "812", "488", "f360"];
+export const TRACKED = ["f430", "sf90", "812", "488", "f360", "296", "roma"];
 
 // key, name, id: the API's own values. listings: cars seen in the sweep above.
 export const MODEL_DIRECTORY = [
