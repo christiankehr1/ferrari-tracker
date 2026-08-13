@@ -23,6 +23,11 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    # A normal run finishes in ~10 minutes. Without a bound, a hung deploy-pages
+    # approval can sit in "waiting" for days, and since the concurrency group
+    # above only allows one run at a time, every subsequent scheduled run
+    # queues behind it and eventually gets cancelled instead of crawling.
+    timeout-minutes: 20
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
