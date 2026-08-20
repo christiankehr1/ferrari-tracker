@@ -44,6 +44,12 @@ MODEL_NAMES = {
     "812": "812",
     "488": "488",
     "f360": "F360",
+    "296": "296",
+    "roma": "Roma",
+    "california": "California",
+    "purosangue": "Purosangue",
+    "458": "458",
+    "portofino": "Portofino",
 }
 
 SITE = os.environ.get("SITE_URL", "").rstrip("/")
