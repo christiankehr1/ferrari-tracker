@@ -1,10 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import {
-  ComposedChart,
+  LineChart,
   Line,
-  Area,
-  Scatter,
-  ZAxis,
   XAxis,
   YAxis,
   Tooltip,
@@ -50,28 +47,6 @@ const BiBadge = () => (
 const chf = (n) => (n == null ? "—" : "CHF " + n.toLocaleString("de-CH"));
 const kchf = (n) => (n == null ? "—" : (n / 1000).toFixed(0) + "k");
 const day = (ts) => ts.slice(0, 10);
-
-// The price-vs-? scatter can plot against either of a listing's two "how much
-// life has this car had" numbers. Same shape either way — a listing field, an
-// axis tick formatter, and how the tooltip should read it back.
-const X_METRICS = [
-  {
-    key: "days",
-    label: "DAYS ON MARKET",
-    field: "days_on_market",
-    binSize: 120,
-    tickFormat: (v) => `${v}d`,
-    tooltipFormat: (v) => `${v}d listed`,
-  },
-  {
-    key: "mileage",
-    label: "MILEAGE",
-    field: "current_mileage",
-    binSize: 10000,
-    tickFormat: (v) => `${Math.round(v / 1000)}k`,
-    tooltipFormat: (v) => `${v.toLocaleString("de-CH")} km`,
-  },
-];
 // Delisting is detected at crawl time (hourly), so the minute is meaningful —
 // show it, unlike the listing date which is only ever a calendar day.
 const stamp = (ts) => ts.slice(0, 16).replace("T", " ") + " UTC";
@@ -139,125 +114,8 @@ function buildStats(listings) {
     }
     const avg = (a) =>
       a.length >= 3 ? Math.round(a.reduce((x, y) => x + y, 0) / a.length / 1000) : undefined;
-    // Same 3-car threshold as the average, so the band never appears on a day
-    // too thin for the line above it to be drawn.
-    const range = (a) => (a.length >= 3 ? [Math.round(Math.min(...a) / 1000), Math.round(Math.max(...a) / 1000)] : undefined);
-    return {
-      date: d,
-      ...Object.fromEntries(MODELS.map((m) => [m.key, avg(acc[m.key])])),
-      ...Object.fromEntries(MODELS.map((m) => [`${m.key}Range`, range(acc[m.key])])),
-      // Unthresholded on purpose: the tooltip needs the real denominator, and
-      // a day with too few cars to average never reaches it anyway.
-      ...Object.fromEntries(MODELS.map((m) => [`${m.key}N`, acc[m.key].length])),
-    };
+    return { date: d, ...Object.fromEntries(MODELS.map((m) => [m.key, avg(acc[m.key])])) };
   });
-}
-
-/**
- * Every individual listing's carried-forward price per day, per model — the
- * raw cloud of points the average line is smoothing over. Same carry-forward
- * rule as buildStats, but nothing is averaged or thresholded, so a model with
- * only one or two cars still shows its dots even though it can't plot a line.
- */
-function buildScatterByModel(listings, days, series) {
-  const today = new Date().toISOString().slice(0, 10);
-  const map = Object.fromEntries(series.map((m) => [m.key, []]));
-  for (const l of listings) {
-    if (!map[l.model_key]) continue;
-    const start = day(l.first_seen);
-    const end = l.delisted_at ? day(l.delisted_at) : today;
-    let price = null;
-    let hi = 0;
-    for (const d of days) {
-      if (d < start || d > end) continue;
-      while (hi < l.history.length && day(l.history[hi].ts) <= d) {
-        price = l.history[hi].price;
-        hi++;
-      }
-      if (price != null) map[l.model_key].push({ date: d, price: Math.round(price / 1000) });
-    }
-  }
-  return map;
-}
-
-// A day averaging four cars and a day averaging forty look identical on the
-// line, and the line moves when the pool changes as much as when a price does
-// — an expensive car delisting drags the average down with nobody moving an
-// ask. So the average never appears alone: the count it came from and the
-// spread it flattened travel with it.
-const THIN_DAY = 4;
-
-// Default tooltip content lists every series at the hovered x, which for the
-// scatter cloud means one line per car on the market that day, plus the
-// min/max band. Filter it down to just the average line(s) — the dots and the
-// band are for visual density, not lookup.
-function ChartTooltip({ active, payload, label }) {
-  if (!active || !payload?.length) return null;
-  const lines = payload.filter((p) => p.dataKey !== "price" && !String(p.dataKey).endsWith("Range"));
-  if (!lines.length) return null;
-  return (
-    <div
-      style={{
-        background: T.panelUp,
-        border: `1px solid ${T.line}`,
-        borderRadius: 4,
-        padding: "6px 10px",
-        fontFamily: T.mono,
-        fontSize: 12,
-      }}
-    >
-      <div style={{ color: T.dim, marginBottom: 4 }}>{label}</div>
-      {lines.map((p) => {
-        const row = p.payload ?? {};
-        const n = row[`${p.dataKey}N`];
-        const band = row[`${p.dataKey}Range`];
-        // A day scraping the 3-car floor gets dimmed whole rather than
-        // annotated: a thin average should look thin at a glance, not read the
-        // same as a well-supported one and leave the caveat to be computed.
-        const thin = n != null && n <= THIN_DAY;
-        return (
-          <div key={p.dataKey} style={{ opacity: thin ? 0.55 : 1, whiteSpace: "nowrap" }}>
-            <span style={{ color: p.color }}>
-              {p.value}k · {String(p.name ?? p.dataKey).toUpperCase()}
-            </span>
-            <span style={{ color: T.faint }}>
-              {n != null && ` · n=${n}`}
-              {band && ` · ${band[0]}\u2013${band[1]}k`}
-            </span>
-          </div>
-        );
-      })}
-    </div>
-  );
-}
-
-// One car per hovered point, so unlike ChartTooltip there's no series list to
-// filter — just name the car and give both axes their units back. The x value
-// reads differently depending on which metric is active, hence the passed-in
-// metric rather than a fixed "Nd listed" string. The median line shares the
-// same x/y space but carries no single car to describe, so it's excluded by
-// dataKey rather than shown as a phantom listing.
-function ScatterTooltip({ active, payload, metric }) {
-  if (!active || !payload?.length) return null;
-  const p = payload.find((entry) => entry.dataKey === "price")?.payload;
-  if (!p) return null;
-  return (
-    <div
-      style={{
-        background: T.panelUp,
-        border: `1px solid ${T.line}`,
-        borderRadius: 4,
-        padding: "6px 10px",
-        fontFamily: T.mono,
-        fontSize: 12,
-      }}
-    >
-      <div style={{ color: T.text, marginBottom: 2 }}>{p.model_label}</div>
-      <div style={{ color: T.dim }}>
-        {p.price}k CHF · {metric.tooltipFormat(p.x)}
-      </div>
-    </div>
-  );
 }
 
 const median = (a) => {
@@ -418,7 +276,6 @@ export default function App() {
   const [error, setError] = useState(null);
   const [model, setModel] = useState("all");
   const [filter, setFilter] = useState("active");
-  const [xMetric, setXMetric] = useState("days");
   const [open, setOpen] = useState(null);
   const [view, setView] = useState(viewFromHash);
   const narrow = useNarrow();
@@ -509,58 +366,6 @@ export default function App() {
   );
 
   const series = useMemo(() => (selected ? [selected] : MODELS), [selected]);
-
-  const scatterByModel = useMemo(
-    () => buildScatterByModel(listings, stats.map((s) => s.date), series),
-    [listings, stats, series]
-  );
-
-  const xMetricDef = useMemo(() => X_METRICS.find((m) => m.key === xMetric), [xMetric]);
-
-  // Current price against either how long a car has sat or how far it's been
-  // driven, grouped per model like the chart above. Delisted cars are
-  // excluded — days_on_market and current_mileage both freeze at exit, but
-  // current_price is only ever the price it left at, not what it sold for.
-  const priceVsDays = useMemo(() => {
-    const map = Object.fromEntries(series.map((m) => [m.key, []]));
-    for (const l of listings) {
-      if (!map[l.model_key] || l.status !== "active") continue;
-      const x = l[xMetricDef.field];
-      if (l.current_price == null || x == null) continue;
-      map[l.model_key].push({
-        id: l.id,
-        model_label: (selected ?? MODELS.find((m) => m.key === l.model_key))?.label,
-        x,
-        price: Math.round(l.current_price / 1000),
-      });
-    }
-    return map;
-  }, [listings, series, selected, xMetricDef]);
-
-  const hasPriceVsDays = useMemo(
-    () => series.some((m) => priceVsDays[m.key]?.length),
-    [series, priceVsDays]
-  );
-
-  // The scatter is too noisy to read a trend off directly, so bucket the x
-  // axis into fixed-width bins and plot the median price per bin — same
-  // 3-car floor as the other charts, so a lonely outlier can't fake a trend.
-  const medianByX = useMemo(() => {
-    const { binSize } = xMetricDef;
-    const map = {};
-    for (const m of series) {
-      const bins = {};
-      for (const p of priceVsDays[m.key] ?? []) {
-        const start = Math.floor(p.x / binSize) * binSize;
-        (bins[start] ??= []).push(p.price);
-      }
-      map[m.key] = Object.entries(bins)
-        .filter(([, prices]) => prices.length >= 3)
-        .map(([start, prices]) => ({ x: Number(start) + binSize / 2, medianPrice: median(prices) }))
-        .sort((a, b) => a.x - b.x);
-    }
-    return map;
-  }, [priceVsDays, series, xMetricDef]);
 
   // An average needs three cars on a day to be plotted, so a thinly-listed model
   // can have a column of nothing but gaps — draw the empty state rather than an
@@ -743,11 +548,10 @@ export default function App() {
           <>
             <div style={{ height: 240 }}>
               <ResponsiveContainer>
-                <ComposedChart data={stats} margin={{ top: 4, right: 8, left: -8, bottom: 0 }}>
+                <LineChart data={stats} margin={{ top: 4, right: 8, left: -8, bottom: 0 }}>
                   <CartesianGrid stroke={T.line} strokeDasharray="2 6" vertical={false} />
                   <XAxis
                     dataKey="date"
-                    allowDuplicatedCategory={false}
                     tick={{ fill: T.faint, fontSize: 10, fontFamily: T.mono }}
                     tickFormatter={(d) => d.slice(5)}
                     minTickGap={40}
@@ -760,34 +564,17 @@ export default function App() {
                     tickLine={false}
                     domain={["auto", "auto"]}
                   />
-                  <ZAxis range={[18, 18]} />
-                  <Tooltip content={<ChartTooltip />} />
-                  {series.map((m) => (
-                    <Area
-                      key={`${m.key}-band`}
-                      type="monotone"
-                      dataKey={`${m.key}Range`}
-                      stroke="none"
-                      fill={m.color}
-                      fillOpacity={series.length > 1 ? 0.06 : 0.1}
-                      isAnimationActive={false}
-                      connectNulls
-                      activeDot={false}
-                      legendType="none"
-                    />
-                  ))}
-                  {series.map((m) => (
-                    <Scatter
-                      key={`${m.key}-dots`}
-                      data={scatterByModel[m.key]}
-                      dataKey="price"
-                      name={m.label}
-                      fill={m.color}
-                      fillOpacity={series.length > 1 ? 0.22 : 0.35}
-                      stroke="none"
-                      isAnimationActive={false}
-                    />
-                  ))}
+                  <Tooltip
+                    contentStyle={{
+                      background: T.panelUp,
+                      border: `1px solid ${T.line}`,
+                      borderRadius: 4,
+                      fontFamily: T.mono,
+                      fontSize: 12,
+                    }}
+                    labelStyle={{ color: T.dim }}
+                    formatter={(v, n) => [v + "k", n.toUpperCase()]}
+                  />
                   {series.map((m) => (
                     <Line
                       key={m.key}
@@ -799,7 +586,7 @@ export default function App() {
                       connectNulls
                     />
                   ))}
-                </ComposedChart>
+                </LineChart>
               </ResponsiveContainer>
             </div>
             <div
@@ -817,130 +604,6 @@ export default function App() {
                   <span style={{ color: m.color }}>■</span> {m.label}
                 </span>
               ))}
-              <span style={{ color: T.faint }}>
-                · line = daily average · band = daily min–max · dots = individual listings
-              </span>
-            </div>
-          </>
-        )}
-      </section>
-
-      {/* Price vs. days on market / mileage */}
-      <section style={{ padding: "8px 24px 8px" }}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: 12,
-            marginBottom: 12,
-          }}
-        >
-          <div style={{ fontFamily: T.mono, fontSize: 11, color: T.dim, letterSpacing: "0.14em" }}>
-            PRICE VS. {xMetricDef.label} · kCHF
-            {selected && (
-              <>
-                {" · "}
-                <span style={{ color: selected.color }}>{selected.label}</span>
-              </>
-            )}
-          </div>
-          <div style={{ display: "flex", gap: 8 }}>
-            {X_METRICS.map((m) => (
-              <Tab key={m.key} val={m.key} cur={xMetric} set={setXMetric}>
-                {m.label}
-              </Tab>
-            ))}
-          </div>
-        </div>
-        {!hasPriceVsDays ? (
-          <div
-            style={{
-              height: 220,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              border: `1px dashed ${T.line}`,
-              borderRadius: 4,
-              fontFamily: T.mono,
-              fontSize: 12,
-              color: T.faint,
-              textAlign: "center",
-              padding: 24,
-            }}
-          >
-            No active {selected ? selected.label : ""} listings to plot right now.
-          </div>
-        ) : (
-          <>
-            <div style={{ height: 220 }}>
-              <ResponsiveContainer>
-                <ComposedChart margin={{ top: 4, right: 8, left: -8, bottom: 4 }}>
-                  <CartesianGrid stroke={T.line} strokeDasharray="2 6" />
-                  <XAxis
-                    type="number"
-                    dataKey="x"
-                    name={xMetricDef.label}
-                    tickFormatter={xMetricDef.tickFormat}
-                    tick={{ fill: T.faint, fontSize: 10, fontFamily: T.mono }}
-                    axisLine={{ stroke: T.line }}
-                    tickLine={false}
-                    domain={[0, "auto"]}
-                  />
-                  <YAxis
-                    type="number"
-                    dataKey="price"
-                    name="Asking price"
-                    tick={{ fill: T.faint, fontSize: 10, fontFamily: T.mono }}
-                    axisLine={false}
-                    tickLine={false}
-                    domain={["auto", "auto"]}
-                  />
-                  <Tooltip content={<ScatterTooltip metric={xMetricDef} />} cursor={{ stroke: T.line }} />
-                  {series.map((m) => (
-                    <Scatter
-                      key={`${m.key}-dots`}
-                      data={priceVsDays[m.key]}
-                      fill={m.color}
-                      fillOpacity={series.length > 1 ? 0.45 : 0.65}
-                      stroke="none"
-                      isAnimationActive={false}
-                    />
-                  ))}
-                  {series.map((m) => (
-                    <Line
-                      key={`${m.key}-median`}
-                      data={medianByX[m.key]}
-                      dataKey="medianPrice"
-                      stroke={m.color}
-                      strokeWidth={2}
-                      dot={{ r: 3, fill: m.color, stroke: "none" }}
-                      activeDot={{ r: 4 }}
-                      isAnimationActive={false}
-                    />
-                  ))}
-                </ComposedChart>
-              </ResponsiveContainer>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                gap: 20,
-                fontFamily: T.mono,
-                fontSize: 11,
-                color: T.dim,
-                marginTop: 4,
-              }}
-            >
-              {series.map((m) => (
-                <span key={m.key}>
-                  <span style={{ color: m.color }}>■</span> {m.label}
-                </span>
-              ))}
-              <span style={{ color: T.faint }}>
-                · line = median per bin · each dot = one active listing
-              </span>
             </div>
           </>
         )}
