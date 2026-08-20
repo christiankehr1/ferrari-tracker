@@ -17,6 +17,10 @@ export const T = {
   acqua: "#1A9AA8",
   viola: "#A855F7",
   arancio: "#FF7A1A",
+  cremisi: "#B51446",
+  indaco: "#5C43D3",
+  ottone: "#997C30",
+  porpora: "#A200A3",
   drop: "#38D073",
   // One face everywhere (see the @font-face in index.html). The roles are kept
   // separate so a second face can be reintroduced without touching call sites.
