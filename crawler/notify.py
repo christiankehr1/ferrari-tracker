@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """
-New-listing email alerts.
+Consolidated email digests.
 
 Runs right after crawl.py in the same Action, reads the listings.json that
-crawl just wrote, emails anything newly seen, and marks it notified so the
-next run stays quiet.
+crawl just wrote, and emails at most one digest every DIGEST_HOURS (48h):
+every new listing plus every price change since the last digest, in one mail.
+Between digests the crawl stays quiet and news simply accumulates — unmarked
+`notified` flags and snapshot rows are the queue.
 
 Stdlib only, no dependencies. Configured entirely by environment:
 
@@ -18,23 +20,32 @@ Stdlib only, no dependencies. Configured entirely by environment:
 Unset SMTP_HOST and this is a no-op — the crawl still publishes. Alerts are a
 side-car, and a broken mailbox must never cost us a data point.
 
-The notified flag lives in listings.json, which is committed, so the repo is
-the delivery log. No state of our own, same as the rest of this project.
+The notified flag lives in listings.json and the last-digest timestamp in
+notify_state.json, both committed, so the repo is the delivery log. No state
+of our own, same as the rest of this project.
 """
 
+import csv
 import json
 import os
 import re
 import smtplib
 import ssl
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from email.message import EmailMessage
 from email.utils import formatdate
 from pathlib import Path
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 LISTINGS_F = DATA / "listings.json"
+SNAPSHOTS_F = DATA / "snapshots.csv"
+STATE_F = DATA / "notify_state.json"
+
+# Consolidation window: at most one update email every this many hours. It's a
+# cap, not a schedule — a digest goes out on the first crawl after the window
+# reopens that actually has something to say.
+DIGEST_HOURS = 48
 
 # Display names for the keys crawl.py tracks. Falls back to the raw key, so
 # adding a model to MODELS never breaks the mail.
@@ -91,41 +102,92 @@ def title(l):
     return " ".join(bits)
 
 
-def render(cars):
-    n = len(cars)
-    subject = (
-        f"New on AutoScout: {title(cars[0])} — {money(cars[0]['current_price'])}"
-        if n == 1
-        else f"{n} new Ferrari listings"
+def _where(l):
+    return " · ".join(x for x in [l.get("seller_city"), l.get("seller_name")] if x)
+
+
+def _row(l, meta_html):
+    return (
+        f'<tr>'
+        f'<td style="padding:12px 0;border-bottom:1px solid #eee">'
+        f'<a href="{l["url"]}" style="color:#c00;font-weight:600;'
+        f'text-decoration:none;font-size:15px">{title(l)}</a><br>'
+        f'{meta_html}<br>'
+        f'<span style="color:#888;font-size:13px">{_where(l)}</span>'
+        f"</td></tr>"
     )
 
-    lines, rows = [], []
-    for l in cars:
-        where = " · ".join(
-            x for x in [l.get("seller_city"), l.get("seller_name")] if x
-        )
-        lines.append(
-            f"{title(l)}\n"
-            f"  {money(l['current_price'])} · {km(l.get('current_mileage'))}\n"
-            f"  {where}\n"
-            f"  {l['url']}\n"
-        )
-        rows.append(
-            f'<tr>'
-            f'<td style="padding:12px 0;border-bottom:1px solid #eee">'
-            f'<a href="{l["url"]}" style="color:#c00;font-weight:600;'
-            f'text-decoration:none;font-size:15px">{title(l)}</a><br>'
-            f'<span style="font-size:15px">{money(l["current_price"])}</span>'
-            f'<span style="color:#888"> · {km(l.get("current_mileage"))}</span><br>'
-            f'<span style="color:#888;font-size:13px">{where}</span>'
-            f"</td></tr>"
+
+def render_digest(new, changes):
+    """One consolidated mail: everything since the last digest. New listings
+    first, then price moves on cars already reported. `changes` items carry a
+    `prev_price` key next to the usual listing fields."""
+    parts = []
+    if new:
+        parts.append(f"{len(new)} new listing{'s' if len(new) != 1 else ''}")
+    if changes:
+        parts.append(f"{len(changes)} price change{'s' if len(changes) != 1 else ''}")
+    subject = (
+        # A lone new car keeps the old, specific subject — it's the best line.
+        f"New on AutoScout: {title(new[0])} — {money(new[0]['current_price'])}"
+        if len(new) == 1 and not changes
+        else "Ferrari update: " + ", ".join(parts)
+    )
+
+    text_sections, html_sections = [], []
+
+    if new:
+        lines, rows = [], []
+        for l in new:
+            lines.append(
+                f"{title(l)}\n"
+                f"  {money(l['current_price'])} · {km(l.get('current_mileage'))}\n"
+                f"  {_where(l)}\n"
+                f"  {l['url']}\n"
+            )
+            rows.append(_row(
+                l,
+                f'<span style="font-size:15px">{money(l["current_price"])}</span>'
+                f'<span style="color:#888"> · {km(l.get("current_mileage"))}</span>',
+            ))
+        text_sections.append("NEW LISTINGS\n\n" + "\n".join(lines))
+        html_sections.append(
+            '<h3 style="font-size:13px;color:#888;text-transform:uppercase;'
+            'letter-spacing:.05em;margin:20px 0 4px">New listings</h3>'
+            f'<table style="width:100%;border-collapse:collapse">{"".join(rows)}</table>'
         )
 
-    text = "\n".join(lines)
+    if changes:
+        lines, rows = [], []
+        for l in changes:
+            pct = (l["current_price"] - l["prev_price"]) / l["prev_price"] * 100
+            move = f"{money(l['prev_price'])} → {money(l['current_price'])} ({pct:+.1f}%)"
+            lines.append(
+                f"{title(l)}\n"
+                f"  {move} · {km(l.get('current_mileage'))}\n"
+                f"  {_where(l)}\n"
+                f"  {l['url']}\n"
+            )
+            color = "#1a7f37" if pct < 0 else "#c00"
+            rows.append(_row(
+                l,
+                f'<span style="font-size:15px">{money(l["prev_price"])} → '
+                f'{money(l["current_price"])}</span> '
+                f'<span style="color:{color};font-size:13px">({pct:+.1f}%)</span>'
+                f'<span style="color:#888"> · {km(l.get("current_mileage"))}</span>',
+            ))
+        text_sections.append("PRICE CHANGES\n\n" + "\n".join(lines))
+        html_sections.append(
+            '<h3 style="font-size:13px;color:#888;text-transform:uppercase;'
+            'letter-spacing:.05em;margin:20px 0 4px">Price changes</h3>'
+            f'<table style="width:100%;border-collapse:collapse">{"".join(rows)}</table>'
+        )
+
+    text = "\n\n".join(text_sections)
     html = (
         '<div style="font-family:-apple-system,Segoe UI,sans-serif;max-width:600px">'
         f'<h2 style="font-size:16px;font-weight:600">{subject}</h2>'
-        f'<table style="width:100%;border-collapse:collapse">{"".join(rows)}</table>'
+        + "".join(html_sections)
     )
     if SITE:
         text += f"\nDashboard: {SITE}\n"
@@ -180,6 +242,53 @@ def days_listed(l):
         return max(0, int((end - start).total_seconds() // 86400))
     except (KeyError, TypeError, ValueError):
         return None
+
+
+def load_state():
+    """notify_state.json: currently just {last_digest_at}. Missing or broken
+    reads as empty — worst case the price-change window falls back to
+    DIGEST_HOURS and a digest goes out immediately, never a crash."""
+    try:
+        return json.loads(STATE_F.read_text())
+    except (OSError, ValueError):
+        return {}
+
+
+def price_changes_since(listings, since):
+    """Active, already-reported listings whose asking price moved after `since`,
+    each returned as a copy carrying `prev_price` — the last price recorded at
+    or before `since`.
+
+    Reads snapshots.csv: crawl.py appends a row only when price or mileage
+    moved, so per listing the last row at-or-before `since` is what the last
+    digest (or the new-listing mail) showed."""
+    if not SNAPSHOTS_F.exists():
+        return []
+
+    snaps = {}
+    with SNAPSHOTS_F.open() as f:
+        for r in csv.DictReader(f):
+            snaps.setdefault(r["listing_id"], []).append(r)
+
+    changes = []
+    for l in listings.values():
+        # New cars are the digest's other section; delisted cars are the
+        # weekly's business.
+        if l.get("status") != "active" or not l.get("notified"):
+            continue
+        rows = sorted(snaps.get(str(l["id"]), []), key=lambda r: r["ts"])
+        before = [r for r in rows if _parse_dt(r["ts"]) <= since]
+        if not before or not rows or rows[-1] is before[-1]:
+            continue
+        prev = float(before[-1]["price"]) if before[-1]["price"] else None
+        cur = float(rows[-1]["price"]) if rows[-1]["price"] else None
+        # Only real price moves; mileage-only snapshots and price-on-request
+        # transitions don't make the mail.
+        if prev and cur and prev != cur:
+            changes.append({**l, "prev_price": prev, "current_price": cur})
+
+    changes.sort(key=lambda l: abs(l["current_price"] - l["prev_price"]), reverse=True)
+    return changes
 
 
 def render_weekly(cars):
@@ -321,7 +430,7 @@ def test_send():
             "url": "https://www.autoscout24.ch/",
         }
 
-    subject, text, html = render([sample])
+    subject, text, html = render_digest([sample], [])
     subject = "[test] " + subject
     text = "This is a test of the Cavallino Index alert. A real one looks like:\n\n" + text
     print(f"notify --test: sending sample to {os.environ.get('NOTIFY_TO', '(NOTIFY_TO unset)')} …")
@@ -357,16 +466,38 @@ def main():
         print(f"notify: first run — adopted {len(listings)} existing listings, sent nothing.")
         return
 
-    if not fresh:
-        print("notify: nothing new.")
+    now = datetime.now(timezone.utc)
+    last = load_state().get("last_digest_at")
+
+    # The consolidation gate: inside the window, hold everything — don't mark,
+    # don't send. Fresh listings simply stay unflagged and price moves keep
+    # accumulating in snapshots.csv until the window reopens.
+    if last and now - _parse_dt(last) < timedelta(hours=DIGEST_HOURS):
+        reopens = (_parse_dt(last) + timedelta(hours=DIGEST_HOURS)).strftime("%Y-%m-%d %H:%M UTC")
+        if fresh:
+            print(f"notify: holding {len(fresh)} new listing(s) — "
+                  f"digest window reopens {reopens}.")
+        else:
+            print(f"notify: digest window closed until {reopens}, nothing held.")
+        return
+
+    # No prior digest (first run of the consolidated format): look back one
+    # window rather than the whole snapshot history, or that first mail would
+    # replay months of price moves.
+    since = _parse_dt(last) if last else now - timedelta(hours=DIGEST_HOURS)
+    changes = price_changes_since(listings, since)
+
+    if not fresh and not changes:
+        print("notify: window open but nothing to report.")
         return
 
     if not os.environ.get("SMTP_HOST"):
-        print(f"notify: {len(fresh)} new, but SMTP_HOST unset — alerts off, not marking.")
+        print(f"notify: {len(fresh)} new / {len(changes)} price change(s), "
+              "but SMTP_HOST unset — alerts off, not marking.")
         return
 
     fresh.sort(key=lambda l: l.get("current_price") or 0)
-    subject, text, html = render(fresh)
+    subject, text, html = render_digest(fresh, changes)
 
     try:
         send(subject, text, html)
@@ -379,7 +510,9 @@ def main():
     for l in fresh:
         listings[str(l["id"])]["notified"] = True
     write(listings)
-    print(f"notify: emailed {len(fresh)} new listing(s) to {os.environ['NOTIFY_TO']}.")
+    STATE_F.write_text(json.dumps({"last_digest_at": now.isoformat()}, indent=1))
+    print(f"notify: digest sent to {os.environ['NOTIFY_TO']} — "
+          f"{len(fresh)} new, {len(changes)} price change(s).")
 
 
 if __name__ == "__main__":
