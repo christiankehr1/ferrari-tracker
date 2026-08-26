@@ -41,9 +41,12 @@ jobs:
       - name: Crawl AutoScout24
         run: python crawler/crawl.py
 
-      # Between crawl and commit on purpose: the notified flags it sets ride
-      # along in the same data commit. No secrets set = no-op, crawl unaffected.
-      - name: Email new listings
+      # Between crawl and commit on purpose: the notified flags and digest
+      # timestamp it sets ride along in the same data commit. No secrets set =
+      # no-op, crawl unaffected. Sends at most one mail every 48h (see
+      # DIGEST_HOURS in notify.py) — new listings and price changes, in one
+      # consolidated digest.
+      - name: Email consolidated digest
         env:
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}

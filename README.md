@@ -7,7 +7,7 @@ No servers, no database, no accounts beyond GitHub. A scheduled Action crawls, c
 ```
 GitHub Actions (hourly)
   └─ crawler/crawl.py ── AutoScout24 API
-        └─ crawler/notify.py ── emails newly listed cars (optional)
+        └─ crawler/notify.py ── emails a 48h consolidated digest (optional)
               └─ commits data/*.{json,csv} to the repo
                     └─ builds web/ and deploys to GitHub Pages
 ```
@@ -67,7 +67,7 @@ Fetches `data/dashboard.json`, which is copied next to the built site on deploy.
 
 ## Alerts
 
-Off by default. Set five secrets and every newly listed car emails you at the end of the crawl that found it.
+Off by default. Set five secrets and you get **at most one digest every two days**: every newly listed car plus every price change since the last digest, in one consolidated email. The crawl still runs hourly — news just accumulates until the 48-hour window (`DIGEST_HOURS` in `crawler/notify.py`) reopens, then goes out on the first crawl that has something to say.
 
 ```bash
 gh secret set SMTP_HOST --body "smtp.gmail.com"
@@ -88,11 +88,12 @@ NOTIFY_TO=zerbinoelenaz@gmail.com \
 python crawler/notify.py --test
 ```
 
-`crawler/notify.py` runs after the crawl, mails the diff, and writes `notified: true` onto each listing it sent. That flag is committed, so **the repo is the delivery log** — no database, same as everything else here.
+`crawler/notify.py` runs after every crawl, but only sends when the last digest is 48+ hours old. It writes `notified: true` onto each listing it sent and the send time into `data/notify_state.json`. Both are committed, so **the repo is the delivery log** — no database, same as everything else here. Inside the window nothing is marked: new listings stay unflagged and price moves keep accumulating in `snapshots.csv`, so the next digest picks up everything since the last one.
 
 Consequences worth knowing:
 
-- **The first run after switching alerts on sends nothing.** A `listings.json` where nothing is flagged is a backlog, not news, so it's adopted silently. Otherwise turning this on would mail you 300 cars that have been listed for months.
+- **The first run after switching alerts on sends nothing.** A `listings.json` where nothing is flagged is a backlog, not news, so it's adopted silently. Otherwise turning this on would mail you 300 cars that have been listed for months. Likewise the first digest after this format change only looks back 48 hours for price moves, not through the whole snapshot history.
+- **48 hours is a cap, not a schedule.** A quiet market sends nothing; the digest goes out on the first hourly crawl after the window reopens that actually has news.
 - **A failed send doesn't mark.** The next crawl retries. A dead mailbox never costs a data point — the crawl is the product, alerts are a side-car.
 - **Unset secrets are a no-op**, not an error. The crawl publishes exactly as before.
 - **Relists ping.** A dealer deleting and re-posting a car creates a new listing ID, which reads as new. That's the same fingerprinting gap called out at the bottom of this file — alerts inherit it.
