@@ -1713,7 +1713,7 @@
   "current_mileage": 54000,
   "first_price": 115000.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "11746468": {
   "id": 11746468,
@@ -3429,7 +3429,7 @@
   "current_mileage": 4350,
   "first_price": 399900.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "12487984": {
   "id": 12487984,
@@ -4235,7 +4235,7 @@
   "current_mileage": 9900,
   "first_price": 329000.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "12634976": {
   "id": 12634976,
@@ -5041,7 +5041,7 @@
   "current_mileage": 45000,
   "first_price": 121000.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "12816454": {
   "id": 12816454,
@@ -8759,7 +8759,7 @@
   "current_mileage": 68245,
   "first_price": 59500.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20267595": {
   "id": 20267595,
@@ -9773,7 +9773,7 @@
   "current_mileage": 35500,
   "first_price": 127000.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20344221": {
   "id": 20344221,
@@ -9877,7 +9877,7 @@
   "current_mileage": 59000,
   "first_price": 145000.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20347278": {
   "id": 20347278,
@@ -11463,7 +11463,7 @@
   "current_mileage": 34000,
   "first_price": 294000.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20452222": {
   "id": 20452222,
@@ -12867,7 +12867,7 @@
   "current_mileage": 2500,
   "first_price": 299999.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20529565": {
   "id": 20529565,
@@ -13829,7 +13829,7 @@
   "current_mileage": 35900,
   "first_price": 198000.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20568126": {
   "id": 20568126,
@@ -14817,7 +14817,7 @@
   "current_mileage": 29300,
   "first_price": 389000.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20607298": {
   "id": 20607298,
@@ -14947,7 +14947,7 @@
   "current_mileage": 26000,
   "first_price": 198980.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20608483": {
   "id": 20608483,
@@ -15207,7 +15207,7 @@
   "current_mileage": 15000,
   "first_price": 194900.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20615234": {
   "id": 20615234,
@@ -16247,7 +16247,7 @@
   "current_mileage": 4690,
   "first_price": 599999.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20649380": {
   "id": 20649380,
@@ -16533,7 +16533,7 @@
   "current_mileage": 19995,
   "first_price": 172500.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20654887": {
   "id": 20654887,
@@ -16819,7 +16819,7 @@
   "current_mileage": 42161,
   "first_price": 75000.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20663717": {
   "id": 20663717,
@@ -16975,7 +16975,7 @@
   "current_mileage": 2600,
   "first_price": 249900.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20668725": {
   "id": 20668725,
@@ -19185,7 +19185,7 @@
   "current_mileage": 2000,
   "first_price": 295000.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20719508": {
   "id": 20719508,
@@ -19263,7 +19263,7 @@
   "current_mileage": 9000,
   "first_price": 489000.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20720918": {
   "id": 20720918,
@@ -19523,7 +19523,7 @@
   "current_mileage": 2890,
   "first_price": 469900.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20728239": {
   "id": 20728239,
@@ -21759,7 +21759,7 @@
   "current_mileage": 14400,
   "first_price": 429900.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20821680": {
   "id": 20821680,
@@ -22357,7 +22357,7 @@
   "current_mileage": 1000,
   "first_price": 255000.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20842513": {
   "id": 20842513,
@@ -22617,7 +22617,7 @@
   "current_mileage": 6000,
   "first_price": 215000.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20847183": {
   "id": 20847183,
@@ -22773,7 +22773,7 @@
   "current_mileage": 33500,
   "first_price": 599900.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20855771": {
   "id": 20855771,
@@ -23839,7 +23839,7 @@
   "current_mileage": 11088,
   "first_price": 525000.0,
   "notified": true,
-  "sold_notified": false
+  "sold_notified": true
  },
  "20882011": {
   "id": 20882011,
